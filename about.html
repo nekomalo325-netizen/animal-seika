@@ -58,7 +58,7 @@
             <div class="container">
                 <div class="section-title" style="padding: 80px 0 0; margin-bottom: 95px;">
                     <span class="section-title__en">About</span>
-                    <span class="section-title__ja">あにまる製菓について</span>
+                    <span class="section-title__ja" data-i18n="about.title.ja">あにまる製菓について</span>
                     <span class="section-title__line"></span>
                 </div>
             </div>
@@ -69,13 +69,13 @@
             <div class="container">
                 <div class="about-philosophy" style="max-width: 800px; margin: 0 auto; text-align: center;">
                     <img src="rogo/アセット 2.png" alt="あにまる製菓" style="width: 100px; margin: 0 auto 100px;" loading="lazy">
-                    <h2
+                    <h2 data-i18n="about.philosophy.heading"
                         style="font-size: var(--fs-h3); font-weight: 600; color: var(--color-heading); letter-spacing: 0.1em; margin-bottom: 16px;">
                         "日々の生活にそっと甘さを添える、心のお菓子"
                     </h2>
                     <span
                         style="display: block; width: 40px; height: 1px; background: var(--color-border); margin: 32px auto;"></span>
-                    <p style="line-height: 2.2; letter-spacing: 0.04em;">
+                    <p style="line-height: 2.2; letter-spacing: 0.04em;" data-i18n="about.philosophy.text">
                         あにまる製菓は、一人のデザイナーの「好き」から始まった東方Project二次創作サークルです。<br>
                         絵師様からご寄稿頂いたイラストを、デザイナーが魂を込めて、一品一品丁寧に仕立てます。<br><br>
                         素材の質感からレイアウトの細部まで、納得いくまでこだわり抜く。<br>
@@ -100,10 +100,10 @@
                         <h3
                             style="font-family:var(--font-heading);font-size:18px;font-weight:600;color:var(--color-heading);margin-bottom:4px;">
                             Y_o_h_a_k_u</h3>
-                        <p
+                        <p data-i18n="about.member.yohaku.role"
                             style="font-size:12px;color:var(--color-accent);font-weight:500;letter-spacing:0.08em;margin-bottom:12px;">
                             代表・デザイナー</p>
-                        <p style="font-size:13px;line-height:1.8;color:var(--color-body);margin-bottom:20px;">
+                        <p style="font-size:13px;line-height:1.8;color:var(--color-body);margin-bottom:20px;" data-i18n="about.member.yohaku.desc">
                             世界観を形にするビジュアル統括。<br>
                             余白や空気感を活かした上品な表現と、イラストの魅力を最大限に引き出すグッズ企画・制作を得意とする。
                         </p>
@@ -121,10 +121,10 @@
                         <h3
                             style="font-family:var(--font-heading);font-size:18px;font-weight:600;color:var(--color-heading);margin-bottom:4px;">
                             Fuka1922</h3>
-                        <p
+                        <p data-i18n="about.member.fuka.role"
                             style="font-size:12px;color:var(--color-accent);font-weight:500;letter-spacing:0.08em;margin-bottom:12px;">
                             副代表</p>
-                        <p style="font-size:13px;line-height:1.8;color:var(--color-body);margin-bottom:20px;">
+                        <p style="font-size:13px;line-height:1.8;color:var(--color-body);margin-bottom:20px;" data-i18n="about.member.fuka.desc">
                             2Dイラストや3Dメタバースなど多彩な活動を展開するクリエイター。<br>SNS管理と制作面で強力にサポート
                         </p>
                         <a href="https://x.com/Fuka1922" target="_blank" rel="noopener noreferrer"
@@ -141,10 +141,10 @@
                         <h3
                             style="font-family:var(--font-heading);font-size:18px;font-weight:600;color:var(--color-heading);margin-bottom:4px;">
                             NEKOmalo</h3>
-                        <p
+                        <p data-i18n="about.member.nekomalo.role"
                             style="font-size:12px;color:var(--color-accent);font-weight:500;letter-spacing:0.08em;margin-bottom:12px;">
                             マネージャー</p>
-                        <p style="font-size:13px;line-height:1.8;color:var(--color-body);margin-bottom:20px;">
+                        <p style="font-size:13px;line-height:1.8;color:var(--color-body);margin-bottom:20px;" data-i18n="about.member.nekomalo.desc">
                             イベント売り子もお話しも大好きなムードメーカー。<br>
                             運営を支えサークルを円滑に進める。<br>
                             癒し系個人VTuberとしても活動。
@@ -195,6 +195,9 @@
 
     <button class="scroll-top" id="scroll-top" aria-label="ページトップに戻る">↑</button>
     <script src="js/main.js"></script>
+    <!-- 多言語対応 -->
+    <script src="js/i18n.js"></script>
+    <script src="js/lang-switcher.js"></script>
 </body>
 
 </html>
