@@ -1,0 +1,637 @@
+/* ============================================================
+   ホームページ専用スタイル（バニラビーンズ風デザイン）
+   ============================================================ */
+
+/* ── 透過ヘッダー（ヒーロー上） ── */
+.header--transparent {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.header--transparent.header--scrolled {
+    background-color: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ── フルスクリーンヒーロー ── */
+.home-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    background: #111;
+}
+
+.home-hero__slider {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.home-hero__slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.8s ease, transform 8s ease;
+    transform: scale(1.08);
+}
+
+.home-hero__slide--active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ヒーローオーバーレイ */
+.home-hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.55) 0%,
+            rgba(0, 0, 0, 0.25) 50%,
+            rgba(0, 0, 0, 0.45) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+
+.home-hero__logo {
+    width: 240px;
+    /* ロゴを大きくする（元の120pxの2倍） */
+    max-width: 80vw;
+    height: auto;
+    margin-bottom: 32px;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.home-hero__catch {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 2.2;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* スクロール誘導 */
+.home-hero__scroll {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-heading);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transition: color 0.3s ease;
+}
+
+.home-hero__scroll:hover {
+    color: #fff;
+}
+
+.home-hero__scroll-line {
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        height: 60px;
+    }
+
+    50% {
+        opacity: 0.4;
+        height: 40px;
+    }
+}
+
+/* ── TOPICSセクション ── */
+.home-topics {
+    background: var(--color-light-gray-bg);
+}
+
+.home-topics__inner {
+    display: grid;
+    /* 画像を左側（中央より左）に収めるため、画像側を1、テキスト側を1.5の比率に変更 */
+    grid-template-columns: 1fr 1.5fr;
+    /* 高さはテキストの内容量に合わせて最小限になるよう 160px を設定（または自動） */
+    min-height: 160px;
+}
+
+.home-topics__main {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-topics__banner {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.home-topics__banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.home-topics__banner:hover img {
+    transform: scale(1.03);
+}
+
+.home-topics__banner-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+    color: #fff;
+}
+
+.home-topics__badge {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 4px 14px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+}
+
+.home-topics__banner-title {
+    font-family: var(--font-body);
+    font-size: 28px;
+    /* 元の大きさに戻す */
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.home-topics__banner-text {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.home-topics__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 48px;
+    /* テキストが大きくなるので少し余白を確保 */
+}
+
+.home-topics__heading {
+    margin-bottom: 20px;
+}
+
+.home-topics__heading-en {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 56px;
+    /* 少し大きめに強調 */
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.06);
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.home-topics__heading-ja {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--color-caption);
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+}
+
+.home-topics__desc {
+    font-size: 18px;
+    /* 元のサイズに戻す */
+    font-weight: 400;
+    color: var(--color-heading);
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+}
+
+/* ── LINE UPセクション ── */
+.home-lineup {
+    padding: var(--space-section) 0;
+    background: #fff;
+}
+
+.home-lineup__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.home-lineup__card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--color-light-gray-bg);
+}
+
+.home-lineup__card-img {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.home-lineup__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.home-lineup__card:hover .home-lineup__card-img img {
+    transform: scale(1.06);
+}
+
+.home-lineup__card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transform: translateY(10px);
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.home-lineup__card:hover .home-lineup__card-body {
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
+}
+
+.home-lineup__card-en {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ffffff;
+    opacity: 0.9;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.home-lineup__card-title {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 0;
+    line-height: 1.4;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.home-lineup__card-desc {
+    font-size: 13px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+/* ── PICK UPセクション ── */
+.home-pickup {
+    padding: var(--space-section) 0;
+    background: var(--color-light-gray-bg);
+    overflow: hidden;
+}
+
+.home-pickup__track-wrap {
+    margin-top: 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    padding: 0 var(--gutter);
+}
+
+.home-pickup__track-wrap::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.home-pickup__track {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 8px;
+    width: max-content;
+}
+
+.home-pickup__item {
+    flex-shrink: 0;
+    width: 260px;
+    background: #fff;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.home-pickup__item:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+}
+
+.home-pickup__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: var(--color-light-gray-bg);
+}
+
+.home-pickup__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.home-pickup__item:hover .home-pickup__img img {
+    transform: scale(1.05);
+}
+
+.home-pickup__info {
+    padding: 16px;
+}
+
+.home-pickup__name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.home-pickup__meta {
+    font-size: 12px;
+    color: var(--color-caption);
+    margin-bottom: 6px;
+}
+
+.home-pickup__price {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+/* ── PHILOSOPHYセクション ── */
+.home-philosophy {
+    position: relative;
+    padding: 120px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    overflow: hidden;
+}
+
+.home-philosophy__bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading);
+    font-size: clamp(60px, 10vw, 140px);
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.03);
+    white-space: nowrap;
+    letter-spacing: 0.08em;
+    pointer-events: none;
+    user-select: none;
+}
+
+.home-philosophy__inner {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.home-philosophy__logo {
+    flex-shrink: 0;
+    width: 200px;
+}
+
+.home-philosophy__logo img {
+    width: 100%;
+    filter: brightness(0) invert(1);
+    opacity: 0.15;
+}
+
+.home-philosophy__body {
+    color: #fff;
+}
+
+.home-philosophy__title {
+    font-family: var(--font-body);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.home-philosophy__divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 32px 0;
+}
+
+.home-philosophy__text {
+    font-size: 14px;
+    line-height: 2.2;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.04em;
+}
+
+.home-philosophy .more-link {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.home-philosophy .more-link:hover {
+    color: #fff;
+}
+
+/* ============================================================
+   レスポンシブ対応
+   ============================================================ */
+
+/* タブレット */
+@media (max-width: 1199px) {
+    .home-hero__catch {
+        font-size: 17px;
+        letter-spacing: 0.1em;
+    }
+
+    .home-topics__inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .home-topics__main {
+        min-height: 400px;
+    }
+
+    .home-topics__side {
+        padding: 40px;
+    }
+
+    .home-topics__heading-en {
+        font-size: 36px;
+    }
+
+    .home-topics__desc {
+        font-size: 16px;
+    }
+
+    .home-lineup__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-philosophy__inner {
+        gap: 40px;
+    }
+
+    .home-philosophy__logo {
+        width: 140px;
+    }
+
+    .home-philosophy__title {
+        font-size: 22px;
+    }
+}
+
+/* スマートフォン */
+@media (max-width: 767px) {
+    .home-hero {
+        height: 100vh;
+        min-height: 500px;
+    }
+
+    .home-hero__logo {
+        width: 80px;
+    }
+
+    .home-hero__catch {
+        font-size: 15px;
+        letter-spacing: 0.08em;
+        line-height: 2;
+    }
+
+    .home-hero__scroll {
+        bottom: 24px;
+        right: 24px;
+    }
+
+    .home-topics__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .home-topics__side {
+        padding: 32px 20px;
+        text-align: left;
+    }
+
+    .home-topics__heading-en {
+        font-size: 28px;
+    }
+
+    .home-topics__desc {
+        font-size: 15px;
+    }
+
+    .home-topics__banner-title {
+        font-size: 20px;
+    }
+
+    .home-topics__banner-info {
+        padding: 24px;
+    }
+
+    .home-lineup__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-lineup__card {
+        aspect-ratio: 16 / 10;
+    }
+
+    .home-lineup__card-title {
+        font-size: 18px;
+    }
+
+    .home-pickup__item {
+        width: 220px;
+    }
+
+    .home-philosophy {
+        padding: 80px 0;
+    }
+
+    .home-philosophy__inner {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .home-philosophy__logo {
+        width: 100px;
+    }
+
+    .home-philosophy__title {
+        font-size: 18px;
+    }
+
+    .home-philosophy__divider {
+        margin: 24px auto;
+    }
+}

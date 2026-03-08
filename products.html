@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goods | あにまる製菓 - グッズ一覧</title>
+    <meta name="description" content="あにまる製菓のグッズ一覧。プライムキーチェーン、アートコレクション、シリアルカード、アクリルジオラマなど、東方Project二次創作グッズをご覧いただけます。">
+    <link rel="icon" href="rogo/アセット 2.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css?v=20260302">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="あにまる製菓 トップへ">
+                <img src="rogo/アセット 1.png" alt="あにまる製菓 ロゴ" width="180" height="40">
+            </a>
+            <nav class="nav" aria-label="メインナビゲーション">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="products.html" class="nav__link nav__link--active">Goods</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+
+                    <li><a href="illustrators.html" class="nav__link">Illustrators</a></li>
+
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="index.html" class="mobile-nav__link">Home</a></li>
+            <li class="mobile-nav__item"><a href="products.html" class="mobile-nav__link">Goods</a></li>
+            <li class="mobile-nav__item"><a href="about.html" class="mobile-nav__link">About</a></li>
+
+            <li class="mobile-nav__item"><a href="illustrators.html" class="mobile-nav__link">Illustrators</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ページタイトル -->
+        <section class="page-hero" style="margin-top: var(--header-height);">
+            <div class="container">
+                <div class="section-title" style="padding: 80px 0 40px;">
+                    <span class="section-title__en">Goods</span>
+                    <span class="section-title__ja">グッズ一覧</span>
+                    <span class="section-title__line"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- フィルター -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <!-- カテゴリーフィルター -->
+                <div class="filter" id="product-filter" style="text-align: center; margin-bottom: 24px;">
+                    <span
+                        style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; color: var(--color-caption); text-transform: uppercase; display: block; margin-bottom: 12px;">Category</span>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+                        <button class="filter-btn filter-btn--active" data-filter="keychain"
+                            onclick="filterProducts('keychain', this)">プライムキーチェーン</button>
+                        <button class="filter-btn" data-filter="art"
+                            onclick="filterProducts('art', this)">アートコレクション</button>
+                        <button class="filter-btn" data-filter="serial"
+                            onclick="filterProducts('serial', this)">シリアルカード</button>
+                        <button class="filter-btn" data-filter="diorama"
+                            onclick="filterProducts('diorama', this)">アクリルジオラマ</button>
+                        <button class="filter-btn" data-filter="other"
+                            onclick="filterProducts('other', this)">その他</button>
+                    </div>
+
+                </div>
+
+                <!-- 商品グリッド -->
+                <div class="grid grid--3" id="product-grid">
+
+                    <!-- プライムキーチェーン トップ画像 -->
+                    <div class="product-category-top" data-category="keychain">
+                        <img src="images/products/keychain/e5d7de2c-8a97-4b91-877f-d97f988c6e48.jpg" alt="プライムキーチェーン"
+                            class="product-category-top__image">
+                        <div class="product-category-top__content">
+                            <h3 class="product-category-top__title">
+                                Prime Keychain Series
+                                <span class="product-category-top__subtitle">プライムキーチェーン</span>
+                            </h3>
+                            <p class="product-category-top__desc">
+                                「ラメの組み合わせ」から「アクリルの形」まで徹底的にこだわり抜き、<br>
+                                キャラクターの魅力を最大限に引き立てる、宝石のような美しさを追求しました。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- プライムキーチェーン 01: フランドール -->
+                    <a href="#" class="product-card" data-category="keychain" data-artist="none">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/keychain/prime-keychain-01-flan-hd.jpg" alt="プライムキーチェーン フランドール"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">プライムキーチェーン フランドール</h3>
+                        </div>
+                    </a>
+
+                    <!-- プライムキーチェーン 02: レミリア -->
+                    <a href="#" class="product-card" data-category="keychain" data-artist="none">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/keychain/prime-keychain-remi.jpg" alt="プライムキーチェーン レミリア"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">プライムキーチェーン レミリア</h3>
+                        </div>
+                    </a>
+
+                    <!-- プライムキーチェーン 03: さとこい -->
+                    <a href="#" class="product-card" data-category="keychain" data-artist="none">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/keychain/prime-keychain-03-satokoi-hd.jpg" alt="プライムキーチェーン さとこい"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">プライムキーチェーン さとこい</h3>
+                        </div>
+                    </a>
+
+                    <!-- プライムキーチェーン 04: 霧雨魔理沙 -->
+                    <a href="#" class="product-card" data-category="keychain" data-artist="none">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/keychain/prime-keychain-04-marisa-hd.jpg" alt="プライムキーチェーン 霧雨魔理沙"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">プライムキーチェーン 霧雨魔理沙</h3>
+                        </div>
+                    </a>
+
+                    <!-- プライムキーチェーン 05: 博麗霊夢 -->
+                    <a href="#" class="product-card" data-category="keychain" data-artist="none">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/keychain/prime-keychain-05-reimu-hd.jpg" alt="プライムキーチェーン 博麗霊夢"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">プライムキーチェーン 博麗霊夢</h3>
+                        </div>
+                    </a>
+
+                    <!-- プライムキーチェーン 06: 十六夜咲夜 -->
+                    <a href="#" class="product-card" data-category="keychain" data-artist="none">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/keychain/prime-keychain-06-sakuya-hd.jpg" alt="プライムキーチェーン 十六夜咲夜"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">プライムキーチェーン 十六夜咲夜</h3>
+                        </div>
+                    </a>
+
+                    <!-- プライムキーチェーン 07: 魂魄妖夢 -->
+                    <a href="#" class="product-card" data-category="keychain" data-artist="none">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/keychain/prime-keychain-07-youmu-hd.jpg" alt="プライムキーチェーン 魂魄妖夢"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">プライムキーチェーン 魂魄妖夢</h3>
+                        </div>
+                    </a>
+
+                    <!-- アートコレクション トップ画像 -->
+                    <div class="product-category-top" data-category="art">
+                        <img src="images/products/art/IMG_3992.jpg" alt="アートコレクション" class="product-category-top__image">
+                        <div class="product-category-top__content">
+                            <h3 class="product-category-top__title">
+                                Art Collection
+                                <span class="product-category-top__subtitle">アートコレクション</span>
+                            </h3>
+                            <p class="product-category-top__desc">
+                                美しいイラストの魅力をそのままお手元へ。<br>
+                                色彩の再現性から紙の厚み、表面の質感に至るまで徹底してこだわり抜き、キャラクターの世界観を最大限に引き立てる、飾って美しいコレクションアイテムを追求しました。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- アートコレクション 商品例 -->
+                    <a href="#" class="product-card" data-category="art">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/art/art-collection-vol01-box-hd.jpg" alt="アートコレクション 第1弾"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">アートコレクション 第1弾</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="art">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/art/art-collection-vol02-box-hd.jpg" alt="アートコレクション 第2弾"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">アートコレクション 第2弾</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="art">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/art/art-collection-vol03-box-hd.jpg" alt="アートコレクション 第3弾"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">アートコレクション 第3弾</h3>
+                        </div>
+                    </a>
+
+
+
+                    <a href="#" class="product-card" data-category="art">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/art/art-collection-Event%20Exclusive.jpg" alt="アートコレクション イベント会場限定"
+                                class="product-card__image" style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">アートコレクション イベント会場限定</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="art">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/art/art-collection-3rdAnniversary.jpg" alt="アートコレクション 3周年記念限定"
+                                class="product-card__image" style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">アートコレクション 3周年記念限定</h3>
+                        </div>
+                    </a>
+
+                    <!-- シリアルカード トップ画像 -->
+                    <div class="product-category-top" data-category="serial">
+                        <img src="images/products/card/75d7c6d2-a6d3-4325-8660-f0424e0791aa.jpg" alt="シリアルカード"
+                            class="product-category-top__image">
+                        <div class="product-category-top__content">
+                            <h3 class="product-category-top__title">
+                                Serial Card Collection
+                                <span class="product-category-top__subtitle">シリアルカードコレクション</span>
+                            </h3>
+                            <p class="product-category-top__desc">
+                                世界にたった一つだけ。あなただけのシリアルナンバーが刻まれた特別なカード。<br>
+                                金箔押しやホログラム加工など、細部にまでこだわった特別で豪華な仕様で、<br>
+                                コレクションの喜びを一層深める極上の一枚を追求しました。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- シリアルカード 商品例 -->
+                    <a href="#" class="product-card" data-category="serial">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/card/serial-card-vol01-box-hd.jpg" alt="シリアルカード 第1弾"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">シリアルカード 第1弾</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="serial">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/card/serial-card-vol02-box-hd.jpg" alt="シリアルカード 第2弾"
+                                class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">シリアルカード 第2弾</h3>
+                        </div>
+                    </a>
+
+                    <!-- アクリルジオラマ トップ画像 -->
+                    <div class="product-category-top" data-category="diorama">
+                        <img src="images/products/diorama/acrylic-diorama-01-satokoi-hd%20(2).jpg" alt="アクリルジオラマ"
+                            class="product-category-top__image">
+                        <div class="product-category-top__content">
+                            <h3 class="product-category-top__title">
+                                Acrylic Diorama
+                                <span class="product-category-top__subtitle">限定アクリルジオラマ</span>
+                            </h3>
+                            <p class="product-category-top__desc">
+                                机の上に広がる、小さな別世界。<br>
+                                幾重にも重ねられたアクリルパーツが生み出す圧倒的な立体感と奥行きによって、<br>
+                                キャラクターたちが織りなす情景を魅力的に描き出すアクリルジオラマです。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- アクリルジオラマ 商品例 -->
+                    <a href="#" class="product-card" data-category="diorama">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/diorama/acrylic-diorama-01-satokoi-hd%20(2).jpg"
+                                alt="アクリルジオラマ さとこいお茶会" class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">アクリルジオラマ さとこいお茶会</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="diorama">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/diorama/acrylic-diorama-02-remifla-hd%20(2).jpg"
+                                alt="アクリルジオラマ 苺レミフラ" class="product-card__image" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">アクリルジオラマ 苺レミフラ</h3>
+                        </div>
+                    </a>
+                    <!-- その他 商品例 -->
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/アクリルスタンド.jpg" alt="その他 アクリルスタンド" class="product-card__image"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">アクリルスタンド</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/アルバム.jpg" alt="その他 アルバム" class="product-card__image"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">アルバム</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/クリアカード.jpg" alt="その他 クリアカード" class="product-card__image"
+                                style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">クリアカード</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/クリアカード２.jpg" alt="その他 クリアカード" class="product-card__image"
+                                style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">クリアカード</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/クリアカード３.jpg" alt="その他 クリアカード" class="product-card__image"
+                                style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">クリアカード</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/クリアカード4.jpg" alt="その他 クリアカード" class="product-card__image"
+                                style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">クリアカード</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/クリアカード5.jpg" alt="その他 クリアカード" class="product-card__image"
+                                style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">クリアカード</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/クリアカード6.jpg" alt="その他 クリアカード" class="product-card__image"
+                                style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">クリアカード</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/クリアカード7.jpg" alt="その他 クリアカード" class="product-card__image"
+                                style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">クリアカード</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/クリアカード8.jpg" alt="その他 クリアカード" class="product-card__image"
+                                style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">クリアカード</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/クリアカード9.jpg" alt="その他 クリアカード" class="product-card__image"
+                                style="object-fit: contain;" loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">クリアカード</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/バッジVol.1.jpg" alt="その他 バッジVol.1" class="product-card__image"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">バッジ Vol.1</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/バッジVol.2.jpg" alt="その他 バッジVol.2" class="product-card__image"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">バッジ Vol.2</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/バッジVol.3.jpg" alt="その他 バッジVol.3" class="product-card__image"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">バッジ Vol.3</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/バッジVol.4.jpg" alt="その他 バッジVol.4" class="product-card__image"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">バッジ Vol.4</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="product-card" data-category="other">
+                        <div class="product-card__image-wrap">
+                            <img src="images/products/その他/バッジVol.5.jpg" alt="その他 バッジVol.5" class="product-card__image"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">バッジ Vol.5</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター（共通） -->
+    <footer class="footer" id="footer">
+        <div class="footer__inner">
+
+            <div class="footer__nav">
+                <div>
+                    <h4 class="footer__nav-title">Menu</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="index.html" class="footer__nav-link">Home</a></li>
+                        <li><a href="products.html" class="footer__nav-link">Goods</a></li>
+                        <li><a href="about.html" class="footer__nav-link">About</a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__nav-title">More</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="illustrators.html" class="footer__nav-link">Illustrators</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="ページトップに戻る">↑</button>
+
+    <!-- 画像拡大用モーダル -->
+    <div id="image-modal" class="image-modal">
+        <span class="image-modal__close" id="image-modal-close">&times;</span>
+        <img class="image-modal__content" id="image-modal-img">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js?v=20260302"></script>
+</body>
+
+</html>

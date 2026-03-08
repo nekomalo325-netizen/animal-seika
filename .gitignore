@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Vercel
+.vercel/
+
+# Temporary files
+*.log
+.temp/
+.tmp/
+
+# Archives
+*.zip
