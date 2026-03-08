@@ -62,33 +62,30 @@
         btn.classList.remove('lang-switcher__btn--active');
       }
     });
-
-    // モバイル版も同期
-    document.querySelectorAll('.lang-switcher-mobile__btn').forEach(function (btn) {
-      if (btn.getAttribute('data-lang') === lang) {
-        btn.classList.add('lang-switcher-mobile__btn--active');
-      } else {
-        btn.classList.remove('lang-switcher-mobile__btn--active');
-      }
-    });
   }
 
   /* ── 言語切り替えUIを生成してヘッダーに挿入する ── */
   function createLangSwitcher() {
     const currentLang = getCurrentLang();
 
-    // --- デスクトップ版（ヘッダーのnavの隣に配置） ---
+    // --- デスクトップ・モバイル共通（ハンバーガーボタンの左に配置） ---
     const switcher = document.createElement('div');
     switcher.className = 'lang-switcher';
     switcher.setAttribute('aria-label', '言語切り替え');
 
-    // 地球アイコン
-    const icon = document.createElement('span');
-    icon.className = 'lang-switcher__icon';
-    icon.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>';
-    switcher.appendChild(icon);
+    // 地球アイコン（モバイルではタップでメニューを開閉する）
+    const iconBtn = document.createElement('button');
+    iconBtn.className = 'lang-switcher__icon';
+    iconBtn.setAttribute('aria-label', '言語を選択');
+    // 少し大きめのアイコン
+    iconBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>';
+    switcher.appendChild(iconBtn);
 
-    // 言語ボタン
+    // 言語ボタンが入るコンテナ
+    const options = document.createElement('div');
+    options.className = 'lang-switcher__options';
+
+    // 言語ボタン（JA / EN / ZH）
     SUPPORTED_LANGS.forEach(function (lang) {
       const btn = document.createElement('button');
       btn.className = 'lang-switcher__btn';
@@ -100,60 +97,37 @@
       btn.textContent = LANG_LABELS[lang];
       btn.addEventListener('click', function () {
         setLang(lang);
+        // スマホで言語を選んだらドロップダウンを閉じる
+        switcher.classList.remove('lang-switcher--open');
       });
-      switcher.appendChild(btn);
+      options.appendChild(btn);
     });
 
-    // ヘッダーの.header__inner内に追加
+    switcher.appendChild(options);
+
+    // アイコンタップで開閉（スマホ用）
+    iconBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      switcher.classList.toggle('lang-switcher--open');
+    });
+
+    // 画面外をタップしたら閉じる
+    document.addEventListener('click', function (e) {
+      if (!switcher.contains(e.target)) {
+        switcher.classList.remove('lang-switcher--open');
+      }
+    });
+
+    // ヘッダーの.header__inner内に挿入
     const headerInner = document.querySelector('.header__inner');
     if (headerInner) {
-      // ハンバーガーボタンの前に挿入
       const hamburger = headerInner.querySelector('.hamburger');
       if (hamburger) {
+        // ハンバーガーの直前に配置
         headerInner.insertBefore(switcher, hamburger);
       } else {
         headerInner.appendChild(switcher);
       }
-    }
-
-    // --- モバイルナビゲーション内にも追加 ---
-    const mobileNav = document.querySelector('.mobile-nav');
-    if (mobileNav) {
-      const mobileSwitcher = document.createElement('div');
-      mobileSwitcher.className = 'lang-switcher-mobile';
-
-      // 地球アイコン
-      const mobileIcon = document.createElement('span');
-      mobileIcon.className = 'lang-switcher-mobile__icon';
-      mobileIcon.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>';
-      mobileSwitcher.appendChild(mobileIcon);
-
-      // "Language" ラベル
-      const label = document.createElement('span');
-      label.className = 'lang-switcher-mobile__label';
-      label.textContent = 'Language';
-      mobileSwitcher.appendChild(label);
-
-      // 言語ボタン
-      const btnGroup = document.createElement('div');
-      btnGroup.className = 'lang-switcher-mobile__group';
-      SUPPORTED_LANGS.forEach(function (lang) {
-        const btn = document.createElement('button');
-        btn.className = 'lang-switcher-mobile__btn';
-        if (lang === currentLang) {
-          btn.classList.add('lang-switcher-mobile__btn--active');
-        }
-        btn.setAttribute('data-lang', lang);
-        btn.textContent = LANG_NAMES[lang];
-        btn.addEventListener('click', function () {
-          setLang(lang);
-        });
-        btnGroup.appendChild(btn);
-      });
-      mobileSwitcher.appendChild(btnGroup);
-
-      // モバイルナビゲーションの末尾に追加
-      mobileNav.appendChild(mobileSwitcher);
     }
   }
 

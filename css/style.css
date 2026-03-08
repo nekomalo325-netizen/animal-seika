@@ -1543,7 +1543,7 @@ p {
 }
 
 /* ============================================================
-   言語切り替えボタン（デスクトップ版）
+   言語切り替えボタン（デスクトップ・モバイル共通）
    ============================================================ */
 .lang-switcher {
   display: flex;
@@ -1552,6 +1552,7 @@ p {
   margin-left: 24px;
   padding-left: 24px;
   border-left: 1px solid var(--color-border);
+  position: relative;
 }
 
 .lang-switcher__icon {
@@ -1559,7 +1560,16 @@ p {
   align-items: center;
   justify-content: center;
   color: var(--color-caption);
-  margin-right: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.lang-switcher__options {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .lang-switcher__btn {
@@ -1594,71 +1604,44 @@ p {
   border-color: var(--color-dark-gray);
 }
 
-/* ============================================================
-   言語切り替えボタン（モバイル版）
-   ============================================================ */
-.lang-switcher-mobile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin-top: 40px;
-  padding-top: 32px;
-  border-top: 1px solid var(--color-border);
-}
-
-.lang-switcher-mobile__icon {
-  display: flex;
-  align-items: center;
-  color: var(--color-caption);
-}
-
-.lang-switcher-mobile__label {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  color: var(--color-caption);
-  text-transform: uppercase;
-}
-
-.lang-switcher-mobile__group {
-  display: flex;
-  gap: 8px;
-}
-
-.lang-switcher-mobile__btn {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--color-caption);
-  background: none;
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
-  padding: 8px 20px;
-  cursor: pointer;
-  transition: all var(--transition-base);
-}
-
-.lang-switcher-mobile__btn:hover {
-  color: var(--color-heading);
-  border-color: var(--color-heading);
-}
-
-.lang-switcher-mobile__btn--active {
-  color: var(--color-white);
-  background-color: var(--color-heading);
-  border-color: var(--color-heading);
-}
-
-.lang-switcher-mobile__btn--active:hover {
-  color: var(--color-white);
-  background-color: var(--color-dark-gray);
-}
-
-/* --- 767px以下でデスクトップ版の言語切り替えを非表示 --- */
+/* --- 767px以下でモバイル用ドロップダウンに変更 --- */
 @media (max-width: 767px) {
   .lang-switcher {
+    margin-left: auto;
+    margin-right: 16px;
+    padding-left: 0;
+    border-left: none;
+  }
+  
+  .lang-switcher__icon {
+    padding: 8px; /* タップしやすく大きく */
+    color: var(--color-heading);
+  }
+
+  .lang-switcher__options {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 8px;
+    gap: 8px;
+    margin-top: 8px;
+    min-width: 80px;
+    z-index: 1200;
+  }
+
+  .lang-switcher--open .lang-switcher__options {
+    display: flex;
+  }
+  
+  .lang-switcher__btn {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 13px;
   }
 }
