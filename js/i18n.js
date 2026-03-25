@@ -62,6 +62,11 @@ const I18N_DATA = {
     en: '<span style="font-weight: 600; color: #222;">Late Mar.</span> 57mm Can Badge Collection Vol.5',
     zh: '<span style="font-weight: 600; color: #222;">3月下旬</span> 57mm徽章收藏 第5弹'
   },
+  "home.topics.schedule.restock": {
+    ja: '<span style="font-weight: 600; color: #222;">3月下旬</span> プライムキーチェーンVol.1～3 再入荷',
+    en: '<span style="font-weight: 600; color: #222;">Late Mar.</span> Prime Keychain Vol.1-3 Restock',
+    zh: '<span style="font-weight: 600; color: #222;">3月下旬</span> 精品钥匙扣Vol.1～3 再到货'
+  },
   "home.topics.schedule.5": {
     ja: '<span style="font-weight: 600; color: #222;">4月下旬</span> プライムキーチェーン6種',
     en: '<span style="font-weight: 600; color: #222;">Late Apr.</span> Prime Keychain 6 types',
