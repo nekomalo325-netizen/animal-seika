@@ -32,45 +32,20 @@ const I18N_DATA = {
   },
 
   // TOPICSセクション
-  "home.topics.heading": {
-    ja: "３周年キャンペーン開催中",
-    en: "3rd Anniversary Campaign",
-    zh: "三周年活动进行中"
+  "home.topics.goods": {
+    ja: "あにまる製菓グッズ頒布中",
+    en: "Animal Confectionery Goods Available",
+    zh: "Animal Confectionery周边贩售中"
   },
   "home.topics.schedule.title": {
     ja: "アニメイト頒布Schedule",
     en: "Animate Distribution Schedule",
     zh: "Animate贩售日程"
   },
-  "home.topics.schedule.1": {
-    ja: '<span style="font-weight: 600; color: #222;">3月上旬</span> プライムキーチェーン２種（咲夜・妖夢）',
-    en: '<span style="font-weight: 600; color: #222;">Early Mar.</span> Prime Keychain 2 types (Sakuya / Youmu)',
-    zh: '<span style="font-weight: 600; color: #222;">3月上旬</span> 精品钥匙扣2款（咲夜·妖梦）'
-  },
-  "home.topics.schedule.2": {
-    ja: '<span style="font-weight: 600; color: #222;">3月上旬</span> シリアルカードコレクション 第２弾',
-    en: '<span style="font-weight: 600; color: #222;">Early Mar.</span> Serial Card Collection Vol.2',
-    zh: '<span style="font-weight: 600; color: #222;">3月上旬</span> 限量编号卡片收藏 第2弹'
-  },
-  "home.topics.schedule.3": {
-    ja: '<span style="font-weight: 600; color: #222;">3/12 (木)</span> あにまる３周年記念日',
-    en: '<span style="font-weight: 600; color: #222;">Mar.12 (Thu)</span> Animal 3rd Anniversary',
-    zh: '<span style="font-weight: 600; color: #222;">3/12（周四）</span> Animal三周年纪念日'
-  },
-  "home.topics.schedule.4": {
-    ja: '<span style="font-weight: 600; color: #222;">3月下旬</span> 57mm缶バッジコレクション 第5弾',
-    en: '<span style="font-weight: 600; color: #222;">Late Mar.</span> 57mm Can Badge Collection Vol.5',
-    zh: '<span style="font-weight: 600; color: #222;">3月下旬</span> 57mm徽章收藏 第5弹'
-  },
-  "home.topics.schedule.restock": {
-    ja: '<span style="font-weight: 600; color: #222;">3月下旬</span> プライムキーチェーンVol.1～3 再入荷',
-    en: '<span style="font-weight: 600; color: #222;">Late Mar.</span> Prime Keychain Vol.1-3 Restock',
-    zh: '<span style="font-weight: 600; color: #222;">3月下旬</span> 精品钥匙扣Vol.1～3 再到货'
-  },
-  "home.topics.schedule.5": {
-    ja: '<span style="font-weight: 600; color: #222;">4月下旬</span> プライムキーチェーン6種',
-    en: '<span style="font-weight: 600; color: #222;">Late Apr.</span> Prime Keychain 6 types',
-    zh: '<span style="font-weight: 600; color: #222;">4月下旬</span> 精品钥匙扣6款'
+  "home.topics.schedule.new1": {
+    ja: '<span style="font-weight: 600; color: #222;">5月中旬</span> プライムキーチェーン6種',
+    en: '<span style="font-weight: 600; color: #222;">Mid May</span> Prime Keychain 6 types',
+    zh: '<span style="font-weight: 600; color: #222;">5月中旬</span> 精品钥匙扣6款'
   },
 
   // LINE UPセクション カテゴリカード
