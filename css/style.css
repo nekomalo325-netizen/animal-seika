@@ -1650,3 +1650,15 @@ p {
     font-size: 13px;
   }
 }
+
+/* ============================================================
+   汎用リンクスタイル
+   ============================================================ */
+.shop-link {
+  text-decoration: underline;
+  transition: color var(--transition-base);
+}
+
+.shop-link:hover {
+  color: #1976d2;
+}
