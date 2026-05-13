@@ -1655,10 +1655,10 @@ p {
    汎用リンクスタイル
    ============================================================ */
 .shop-link {
-  text-decoration: underline;
-  transition: color var(--transition-base);
+  text-decoration: underline !important;
+  transition: color var(--transition-base) !important;
 }
 
 .shop-link:hover {
-  color: #1976d2;
+  color: #1976d2 !important;
 }
