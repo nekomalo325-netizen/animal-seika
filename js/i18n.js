@@ -38,9 +38,9 @@ const I18N_DATA = {
     zh: "Animal Confectionery周边贩售中"
   },
   "home.topics.schedule.title": {
-    ja: "アニメイト頒布Schedule",
-    en: "Animate Distribution Schedule",
-    zh: "Animate贩售日程"
+    ja: "アニメイト頒布・イベントSchedule",
+    en: "Animate Distribution & Event Schedule",
+    zh: "Animate贩售・活动日程"
   },
   "home.topics.schedule.new1": {
     ja: '<span style="font-weight: 600; color: #222;">5月中旬</span> プライムキーチェーン新作6種',
@@ -61,6 +61,11 @@ const I18N_DATA = {
     ja: '<span style="font-weight: 600; color: #222;">6月末</span> シリアルカード新作',
     en: '<span style="font-weight: 600; color: #222;">Late June</span> New Serial Card',
     zh: '<span style="font-weight: 600; color: #222;">6月底</span> 新款限量编号卡片'
+  },
+  "home.topics.schedule.event1": {
+    ja: '<span style="font-weight: 600; color: #222;">6月19日～21日</span> TouhouFest（Torrance Cultural Arts Center, Torrance, CA）',
+    en: '<span style="font-weight: 600; color: #222;">June 19–21</span> TouhouFest (Torrance Cultural Arts Center, Torrance, CA)',
+    zh: '<span style="font-weight: 600; color: #222;">6月19日～21日</span> TouhouFest（Torrance Cultural Arts Center, Torrance, CA）'
   },
 
   // LINE UPセクション カテゴリカード
