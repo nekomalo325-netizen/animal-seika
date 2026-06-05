@@ -68,8 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('image-modal-img');
     const closeBtn = document.getElementById('image-modal-close');
+    const prevBtn = document.getElementById('image-modal-prev');
+    const nextBtn = document.getElementById('image-modal-next');
+    const dotsContainer = document.getElementById('image-modal-dots');
 
     if (modal && modalImg && closeBtn) {
+        let currentImages = [];
+        let currentIndex = 0;
+
         // 商品カードがクリックされた時の処理
         const productCards = document.querySelectorAll('.product-card');
         productCards.forEach(card => {
@@ -82,25 +88,101 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                // クリックされたカード内のimg要素を取得
-                const img = this.querySelector('img');
-                if (img) {
+                // data-images属性を取得、なければ現在の画像のsrcを使用
+                const imagesAttr = this.getAttribute('data-images');
+                if (imagesAttr) {
+                    currentImages = imagesAttr.split(',');
+                } else {
+                    const img = this.querySelector('img');
+                    currentImages = img ? [img.getAttribute('src')] : [];
+                }
+
+                if (currentImages.length > 0) {
+                    currentIndex = 0;
+                    updateModalImage();
+                    
                     modal.style.display = 'flex';
                     // わずかな遅延を入れてフェードインアニメーションを適用
                     setTimeout(() => {
                         modal.classList.add('show');
                     }, 10);
-                    modalImg.src = img.src;
                 }
             });
+        });
+
+        // モーダルの画像を更新する関数
+        function updateModalImage() {
+            modalImg.src = currentImages[currentIndex];
+
+            // 複数画像がある場合のみコントロールを表示
+            if (currentImages.length > 1) {
+                if (prevBtn) prevBtn.style.display = 'flex';
+                if (nextBtn) nextBtn.style.display = 'flex';
+                
+                // ドットの生成
+                if (dotsContainer) {
+                    dotsContainer.innerHTML = '';
+                    dotsContainer.style.display = 'flex';
+                    currentImages.forEach((_, idx) => {
+                        const dot = document.createElement('span');
+                        dot.className = 'image-modal__dot' + (idx === currentIndex ? ' image-modal__dot--active' : '');
+                        dot.addEventListener('click', (e) => {
+                            e.stopPropagation(); // モーダルが閉じるのを防ぐ
+                            currentIndex = idx;
+                            updateModalImage();
+                        });
+                        dotsContainer.appendChild(dot);
+                    });
+                }
+            } else {
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+                if (dotsContainer) {
+                    dotsContainer.innerHTML = '';
+                    dotsContainer.style.display = 'none';
+                }
+            }
+        }
+
+        // 次の画像へ
+        function nextImage(e) {
+            if (e) e.stopPropagation();
+            if (currentImages.length <= 1) return;
+            currentIndex = (currentIndex + 1) % currentImages.length;
+            updateModalImage();
+        }
+
+        // 前の画像へ
+        function prevImage(e) {
+            if (e) e.stopPropagation();
+            if (currentImages.length <= 1) return;
+            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            updateModalImage();
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', prevImage);
+        if (nextBtn) nextBtn.addEventListener('click', nextImage);
+
+        // キーボード操作（左右矢印で画像切り替え、Escで閉じる）
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('show')) return;
+            
+            if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            } else if (e.key === 'Escape') {
+                closeModal();
+            }
         });
 
         // 閉じるボタンがクリックされた時の処理
         closeBtn.addEventListener('click', closeModal);
 
-        // モーダルの背景領域（画像以外）がクリックされた時に閉じる
+        // モーダルの背景領域（画像やボタン以外）がクリックされた時に閉じる
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
+            const container = document.querySelector('.image-modal__container');
+            if (e.target === modal || (container && e.target === container)) {
                 closeModal();
             }
         });
@@ -110,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.remove('show');
             setTimeout(() => {
                 modal.style.display = 'none';
-            }, 300); // cssのtransitionの秒数(0.3s)と合わせる
+            }, 300); // css of transition time(0.3s)
         }
     }
 });

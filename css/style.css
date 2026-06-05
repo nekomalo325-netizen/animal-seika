@@ -1373,6 +1373,85 @@ p {
   cursor: pointer;
 }
 
+.image-modal__container {
+  position: relative;
+  max-width: 90%;
+  max-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal__prev,
+.image-modal__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10001;
+  display: none; /* JS制御で表示切替 */
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.image-modal__prev:hover,
+.image-modal__next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-modal__prev {
+  left: -60px;
+}
+
+.image-modal__next {
+  right: -60px;
+}
+
+@media (max-width: 900px) {
+  .image-modal__prev {
+    left: 10px;
+  }
+  .image-modal__next {
+    right: 10px;
+  }
+}
+
+.image-modal__dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10001;
+}
+
+.image-modal__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.image-modal__dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.image-modal__dot--active {
+  background-color: #ffffff;
+  transform: scale(1.2);
+}
+
 /* ============================================================
    グッズページトップ画像レイアウト最適化 (Responsive)
    ============================================================ */
