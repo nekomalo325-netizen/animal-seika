@@ -197,25 +197,54 @@ const I18N_DATA = {
 
   // 商品名
   "products.name.keychain.flan": {
-    ja: "プライムキーチェーン フランドール", en: "Prime Keychain Flandre", zh: "精品钥匙扣 芙兰朵露"
+    ja: "プライムキーチェーン<br>フランドール・スカーレット",
+    en: "Prime Keychain<br>Flandre Scarlet",
+    zh: "精品钥匙扣<br>芙兰朵露・斯卡蕾特"
   },
   "products.name.keychain.remi": {
-    ja: "プライムキーチェーン レミリア", en: "Prime Keychain Remilia", zh: "精品钥匙扣 蕾米莉亚"
+    ja: "プライムキーチェーン<br>レミリア・スカーレット",
+    en: "Prime Keychain<br>Remilia Scarlet",
+    zh: "精品钥匙扣<br>蕾米莉亚・斯卡蕾特"
   },
   "products.name.keychain.satokoi": {
-    ja: "プライムキーチェーン さとこい", en: "Prime Keychain Satokoi", zh: "精品钥匙扣 觉恋"
+    ja: "プライムキーチェーン<br>古明地さとり/古明地こいし",
+    en: "Prime Keychain<br>Satori Komeiji / Koishi Komeiji",
+    zh: "精品钥匙扣<br>古明地觉/古明地恋"
   },
   "products.name.keychain.marisa": {
-    ja: "プライムキーチェーン 霧雨魔理沙", en: "Prime Keychain Marisa Kirisame", zh: "精品钥匙扣 雾雨魔理沙"
+    ja: "プライムキーチェーン<br>霧雨魔理沙",
+    en: "Prime Keychain<br>Marisa Kirisame",
+    zh: "精品钥匙扣<br>雾雨魔理沙"
   },
   "products.name.keychain.reimu": {
-    ja: "プライムキーチェーン 博麗霊夢", en: "Prime Keychain Reimu Hakurei", zh: "精品钥匙扣 博丽灵梦"
+    ja: "プライムキーチェーン<br>博麗霊夢",
+    en: "Prime Keychain<br>Reimu Hakurei",
+    zh: "精品钥匙扣<br>博丽灵梦"
   },
   "products.name.keychain.sakuya": {
-    ja: "プライムキーチェーン 十六夜咲夜", en: "Prime Keychain Sakuya Izayoi", zh: "精品钥匙扣 十六夜咲夜"
+    ja: "プライムキーチェーン<br>十六夜咲夜",
+    en: "Prime Keychain<br>Sakuya Izayoi",
+    zh: "精品钥匙扣<br>十六夜咲夜"
   },
   "products.name.keychain.youmu": {
-    ja: "プライムキーチェーン 魂魄妖夢", en: "Prime Keychain Youmu Konpaku", zh: "精品钥匙扣 魂魄妖梦"
+    ja: "プライムキーチェーン<br>魂魄妖夢",
+    en: "Prime Keychain<br>Youmu Konpaku",
+    zh: "精品钥匙扣<br>魂魄妖梦"
+  },
+  "products.name.keychain.mokou": {
+    ja: "プライムキーチェーン<br>藤原妹紅",
+    en: "Prime Keychain<br>Mokou Fujiwara",
+    zh: "精品钥匙扣<br>藤原妹红"
+  },
+  "products.name.keychain.flanscarlet": {
+    ja: "プライムキーチェーン<br>フランドール・スカーレット",
+    en: "Prime Keychain<br>Flandre Scarlet",
+    zh: "精品钥匙扣<br>芙兰朵露・斯卡蕾特"
+  },
+  "products.name.keychain.sakuyanew": {
+    ja: "プライムキーチェーン<br>十六夜咲夜",
+    en: "Prime Keychain<br>Sakuya Izayoi",
+    zh: "精品钥匙扣<br>十六夜咲夜"
   },
   "products.name.art.vol1": {
     ja: "アートコレクション 第1弾", en: "Art Collection Vol.1", zh: "艺术收藏 第1弹"
