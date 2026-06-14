@@ -43,24 +43,14 @@ const I18N_DATA = {
     zh: "Animate贩售・活动日程"
   },
   "home.topics.schedule.new1": {
-    ja: '<span style="font-weight: 600; color: #222;">5月中旬</span> プライムキーチェーン新作6種',
-    en: '<span style="font-weight: 600; color: #222;">Mid May</span> New Prime Keychain 6 types',
-    zh: '<span style="font-weight: 600; color: #222;">5月中旬</span> 新款精品钥匙扣6款'
+    ja: '<span style="font-weight: 600; color: #222;">6月末</span> プライムキーチェーン新作3種',
+    en: '<span style="font-weight: 600; color: #222;">Late June</span> New Prime Keychain 3 types',
+    zh: '<span style="font-weight: 600; color: #222;">6月底</span> 新款精品钥匙扣3款'
   },
   "home.topics.schedule.new2": {
-    ja: '<span style="font-weight: 600; color: #222;">5月末</span> パスケース4種',
-    en: '<span style="font-weight: 600; color: #222;">Late May</span> Pass Case 4 types',
-    zh: '<span style="font-weight: 600; color: #222;">5月底</span> 卡套4款'
-  },
-  "home.topics.schedule.new3": {
-    ja: '<span style="font-weight: 600; color: #222;">6月頭</span> プライムキーチェーン新作3種',
-    en: '<span style="font-weight: 600; color: #222;">Early June</span> New Prime Keychain 3 types',
-    zh: '<span style="font-weight: 600; color: #222;">6月初</span> 新款精品钥匙扣3款'
-  },
-  "home.topics.schedule.new4": {
-    ja: '<span style="font-weight: 600; color: #222;">6月末</span> シリアルカード新作',
-    en: '<span style="font-weight: 600; color: #222;">Late June</span> New Serial Card',
-    zh: '<span style="font-weight: 600; color: #222;">6月底</span> 新款限量编号卡片'
+    ja: '<span style="font-weight: 600; color: #222;">7月上旬</span> シリアルカードVol.4',
+    en: '<span style="font-weight: 600; color: #222;">Early July</span> Serial Card Vol.4',
+    zh: '<span style="font-weight: 600; color: #222;">7月上旬</span> 限量编号卡片Vol.4'
   },
   "home.topics.schedule.event1": {
     ja: '<span style="font-weight: 600; color: #222;">6月19日～21日</span> TouhouFest（Torrance Cultural Arts Center, Torrance, CA）',
