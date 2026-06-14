@@ -246,6 +246,36 @@ const I18N_DATA = {
     en: "Prime Keychain<br>Sakuya Izayoi",
     zh: "精品钥匙扣<br>十六夜咲夜"
   },
+  "products.name.keychain.reimutotenko": {
+    ja: "プライムキーチェーン<br>博麗霊夢",
+    en: "Prime Keychain<br>Reimu Hakurei",
+    zh: "精品钥匙扣<br>博丽灵梦"
+  },
+  "products.name.keychain.marisatotenko": {
+    ja: "プライムキーチェーン<br>霧雨魔理沙",
+    en: "Prime Keychain<br>Marisa Kirisame",
+    zh: "精品钥匙扣<br>雾雨魔理沙"
+  },
+  "products.name.keychain.orinkuu": {
+    ja: "プライムキーチェーン<br>火焔猫燐＆霊烏路空",
+    en: "Prime Keychain<br>Rin Kaenbyou & Utsuho Reiuji",
+    zh: "精品钥匙扣<br>火焰猫燐＆灵乌路空"
+  },
+  "products.name.keychain.flanrose": {
+    ja: "プライムキーチェーン<br>フランドール・スカーレット",
+    en: "Prime Keychain<br>Flandre Scarlet",
+    zh: "精品钥匙扣<br>芙兰朵露・斯卡蕾特"
+  },
+  "products.name.keychain.remirose": {
+    ja: "プライムキーチェーン<br>レミリア・スカーレット",
+    en: "Prime Keychain<br>Remilia Scarlet",
+    zh: "精品钥匙扣<br>蕾米莉亚・斯卡蕾特"
+  },
+  "products.name.keychain.tenshi": {
+    ja: "プライムキーチェーン<br>比那名居天子",
+    en: "Prime Keychain<br>Tenshi Hinanawi",
+    zh: "精品钥匙扣<br>比那名居天子"
+  },
   "products.name.art.vol1": {
     ja: "アートコレクション 第1弾", en: "Art Collection Vol.1", zh: "艺术收藏 第1弹"
   },
