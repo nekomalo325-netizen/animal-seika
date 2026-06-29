@@ -393,11 +393,4 @@ const I18N_DATA = {
   "cal.thu": { ja: "木", en: "Thu", zh: "四" },
   "cal.fri": { ja: "金", en: "Fri", zh: "五" },
   "cal.sat": { ja: "土", en: "Sat", zh: "六" },
-
-  // BOOTHショップお知らせ
-  "home.topics.booth_notice": {
-    ja: '【BOOTHショップのグッズ発送に関するお知らせ】<br>6月16日～6月26日間のご注文分につきましては、6月27日以降の順次発送となります。<br>恐れ入りますが、ご利用の際はあらかじめご了承いただけますと幸いです。',
-    en: '[Notice Regarding BOOTH Shop Shipping]<br>Orders placed between June 16 and June 26 will be shipped sequentially from June 27 onwards.<br>We appreciate your understanding in advance.',
-    zh: '【关于BOOTH商店发货延迟的通知】<br>于6月16日至6月26日期间付款的订单，将于6月27日起依序发货。<br>给您带来不便，敬请谅解。'
-  }
 };
