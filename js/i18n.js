@@ -43,19 +43,24 @@ const I18N_DATA = {
     zh: "Animate贩售・活动日程"
   },
   "home.topics.schedule.new1": {
-    ja: '<span style="font-weight: 600; color: #222;">6月末</span> プライムキーチェーン新作3種',
-    en: '<span style="font-weight: 600; color: #222;">Late June</span> New Prime Keychain 3 types',
-    zh: '<span style="font-weight: 600; color: #222;">6月底</span> 新款精品钥匙扣3款'
-  },
-  "home.topics.schedule.new2": {
     ja: '<span style="font-weight: 600; color: #222;">7月上旬</span> シリアルカードVol.4',
     en: '<span style="font-weight: 600; color: #222;">Early July</span> Serial Card Vol.4',
     zh: '<span style="font-weight: 600; color: #222;">7月上旬</span> 限量编号卡片Vol.4'
   },
+  "home.topics.schedule.new2": {
+    ja: '<span style="font-weight: 600; color: #222;">8月上旬</span> プライムキーチェーン新作5種',
+    en: '<span style="font-weight: 600; color: #222;">Early August</span> New Prime Keychain 5 types',
+    zh: '<span style="font-weight: 600; color: #222;">8月上旬</span> 新款精品钥匙扣5款'
+  },
+  "home.topics.schedule.new3": {
+    ja: '<span style="font-weight: 600; color: #222;">8月下旬</span> アートコレクション第4弾',
+    en: '<span style="font-weight: 600; color: #222;">Late August</span> Art Collection Vol.4',
+    zh: '<span style="font-weight: 600; color: #222;">8月下旬</span> 艺术收藏第4弹'
+  },
   "home.topics.schedule.event1": {
-    ja: '<span style="font-weight: 600; color: #222;">6月19日～21日</span> TouhouFest（Torrance Cultural Arts Center, Torrance, CA）',
-    en: '<span style="font-weight: 600; color: #222;">June 19–21</span> TouhouFest (Torrance Cultural Arts Center, Torrance, CA)',
-    zh: '<span style="font-weight: 600; color: #222;">6月19日～21日</span> TouhouFest（Torrance Cultural Arts Center, Torrance, CA）'
+    ja: '<span style="font-weight: 600; color: #222;">10月4日</span> 博麗神社秋季例大祭',
+    en: '<span style="font-weight: 600; color: #222;">October 4</span> Autumn Reitaisai',
+    zh: '<span style="font-weight: 600; color: #222;">10月4日</span> 博丽神社秋季例大祭'
   },
 
   // LINE UPセクション カテゴリカード
