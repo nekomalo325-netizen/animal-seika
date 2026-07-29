@@ -48,9 +48,9 @@ const I18N_DATA = {
     zh: "Animate贩售・活动日程"
   },
   "home.topics.schedule.new1": {
-    ja: '<span style="font-weight: 600; color: #222;">7月上旬</span> シリアルカードVol.4',
-    en: '<span style="font-weight: 600; color: #222;">Early July</span> Serial Card Vol.4',
-    zh: '<span style="font-weight: 600; color: #222;">7月上旬</span> 限量编号卡片Vol.4'
+    ja: '<span style="font-weight: 600; color: #222;">7月上旬</span> シリアルカードVol.3',
+    en: '<span style="font-weight: 600; color: #222;">Early July</span> Serial Card Vol.3',
+    zh: '<span style="font-weight: 600; color: #222;">7月上旬</span> 限量编号卡片Vol.3'
   },
   "home.topics.schedule.new2": {
     ja: '<span style="font-weight: 600; color: #222;">8月上旬</span> プライムキーチェーン新作5種',
