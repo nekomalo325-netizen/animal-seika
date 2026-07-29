@@ -144,17 +144,23 @@
         <!-- 左：スライダー（3月 → 4月） -->
         <div class="home-topics__main" id="topics-slider" style="position: relative; overflow: hidden;">
           <div id="topics-slider-track"
-            style="display: flex; width: 300%; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); height: 100%;">
+            style="display: flex; width: 400%; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); height: 100%;">
 
             <!-- スライド 1: 限定シリアルカードキャンペーン -->
             <div
-              style="width: calc(100% / 3); flex-shrink: 0; height: 100%; background: #fff; display: flex; align-items: center; justify-content: center; padding: 0;">
+              style="width: calc(100% / 4); flex-shrink: 0; height: 100%; background: #fff; display: flex; align-items: center; justify-content: center; padding: 0;">
               <img src="イベント/限定シリアルカード.jpg" alt="限定シリアルカード" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
 
-            <!-- スライド 2: 7月カレンダー -->
+            <!-- スライド 2: 東天紅シリアルカードBOXキャンペーン -->
             <div
-              style="width: calc(100% / 3); flex-shrink: 0; height: 100%; background: #fff; display: flex; align-items: center; justify-content: center; padding: 32px;">
+              style="width: calc(100% / 4); flex-shrink: 0; height: 100%; background: #fff; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="イベント/c24a9b073c1451b1.jpg" alt="東天紅シリアルカードコレクション" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+
+            <!-- スライド 3: 7月カレンダー -->
+            <div
+              style="width: calc(100% / 4); flex-shrink: 0; height: 100%; background: #fff; display: flex; align-items: center; justify-content: center; padding: 32px;">
               <div style="width: 100%; max-width: 380px;">
                 <div
                   style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 20px; color: #222; margin-bottom: 20px; letter-spacing: 0.08em;">
@@ -234,9 +240,9 @@
               </div>
             </div>
 
-            <!-- スライド 3: 8月カレンダー -->
+            <!-- スライド 4: 8月カレンダー -->
             <div
-              style="width: calc(100% / 3); flex-shrink: 0; height: 100%; background: #fff; display: flex; align-items: center; justify-content: center; padding: 32px;">
+              style="width: calc(100% / 4); flex-shrink: 0; height: 100%; background: #fff; display: flex; align-items: center; justify-content: center; padding: 32px;">
               <div style="width: 100%; max-width: 380px;">
                 <div
                   style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 20px; color: #222; margin-bottom: 20px; letter-spacing: 0.08em;">
@@ -346,6 +352,8 @@
               style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.3s;"></span>
             <span class="slider-dot"
               style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.3s;"></span>
+            <span class="slider-dot"
+              style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.3s;"></span>
           </div>
 
           <!-- スライダー用スクリプト -->
@@ -355,13 +363,13 @@
               const prevBtn = document.getElementById('topics-slider-prev');
               const nextBtn = document.getElementById('topics-slider-next');
               const dots = document.querySelectorAll('#topics-slider-dots .slider-dot');
-              const totalSlides = 3;
+              const totalSlides = 4;
               let current = 0;
 
               function goTo(index) {
                 current = index;
-                // 各スライドは全体幅の1/3なので、パーセント = index * (100 / 3)
-                track.style.transform = 'translateX(-' + (current * (100 / 3)) + '%)';
+                // 各スライドは全体幅の1/4なので、パーセント = index * (100 / 4)
+                track.style.transform = 'translateX(-' + (current * (100 / 4)) + '%)';
                 dots.forEach(function (dot, i) {
                   dot.style.background = (i === current) ? '#333' : '#ccc';
                 });
