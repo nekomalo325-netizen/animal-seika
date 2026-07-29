@@ -58,9 +58,9 @@ const I18N_DATA = {
     zh: '<span style="font-weight: 600; color: #222;">8月上旬</span> 新款精品钥匙扣5款'
   },
   "home.topics.schedule.new3": {
-    ja: '<span style="font-weight: 600; color: #222;">8月下旬</span> アートコレクション第4弾',
+    ja: '<span style="font-weight: 600; color: #222;">8月下旬</span> アートコレクションVol.4',
     en: '<span style="font-weight: 600; color: #222;">Late August</span> Art Collection Vol.4',
-    zh: '<span style="font-weight: 600; color: #222;">8月下旬</span> 艺术收藏第4弹'
+    zh: '<span style="font-weight: 600; color: #222;">8月下旬</span> 艺术收藏Vol.4'
   },
   "home.topics.schedule.event1": {
     ja: '<span style="font-weight: 600; color: #222;">10月4日</span> 博麗神社秋季例大祭',
