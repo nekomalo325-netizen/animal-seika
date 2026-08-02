@@ -297,6 +297,9 @@ const I18N_DATA = {
   "products.name.serial.vol2": {
     ja: "シリアルカード 第2弾", en: "Serial Card Vol.2", zh: "限量编号卡片 第2弹"
   },
+  "products.name.serial.vol3": {
+    ja: "シリアルカード 第3弾", en: "Serial Card Vol.3", zh: "限量编号卡片 第3弹"
+  },
   "products.name.diorama.satokoi": {
     ja: "アクリルジオラマ さとこいお茶会", en: "Acrylic Diorama Satokoi Tea Party", zh: "亚克力立体模型 觉恋茶会"
   },
