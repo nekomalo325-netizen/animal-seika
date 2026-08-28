@@ -107,9 +107,9 @@ const I18N_DATA = {
     zh: '在博丽神社秋季例大祭以及全国的同人商店和专卖店。<br>我们在各地贩售倾注匠心的精品。<br>欢迎找到适合您日常生活的那一件。'
   },
   "home.store.shops": {
-    ja: "★アニメイト 各店舗（委託販売）<br>★同人ショップGrep金沢店 / オンライン<br>★AKIBAｰHOBBY / オンライン",
-    en: "★ Animate stores nationwide (consignment sales)<br>★ Doujin Shop Grep Kanazawa / Online<br>★ AKIBA-HOBBY / Online",
-    zh: "★ Animate各店铺（委托销售）<br>★ 同人商店Grep金�的店 / 线上<br>★ AKIBA-HOBBY / 线上"
+    ja: '★アニメイト各店舗（委託販売）／<a href="https://www.animate-onlineshop.jp/products/list.php?mode=search&smt=%E3%81%82%E3%81%AB%E3%81%BE%E3%82%8B%E8%A3%BD%E8%8F%93" target="_blank" rel="noopener noreferrer" class="shop-link">オンライン</a><br>★同人ショップGrep金沢店 / <a href="https://www.grep-tsuhan.net/?mode=grp&gid=2930825&sort=n" target="_blank" rel="noopener noreferrer" class="shop-link">オンライン</a><br>★AKIBAｰHOBBY / <a href="https://shop.akbh.jp/collections/vendors?q=%E3%81%82%E3%81%AB%E3%81%BE%E3%82%8B%E8%A3%BD%E8%8F%93&sort_by=manual" target="_blank" rel="noopener noreferrer" class="shop-link">オンライン</a>',
+    en: '★ Animate stores nationwide (consignment sales) / <a href="https://www.animate-onlineshop.jp/products/list.php?mode=search&smt=%E3%81%82%E3%81%AB%E3%81%BE%E3%82%8B%E8%A3%BD%E8%8F%93" target="_blank" rel="noopener noreferrer" class="shop-link">Online</a><br>★ Doujin Shop Grep Kanazawa / <a href="https://www.grep-tsuhan.net/?mode=grp&gid=2930825&sort=n" target="_blank" rel="noopener noreferrer" class="shop-link">Online</a><br>★ AKIBA-HOBBY / <a href="https://shop.akbh.jp/collections/vendors?q=%E3%81%82%E3%81%AB%E3%81%BE%E3%82%8B%E8%A3%BD%E8%8F%93&sort_by=manual" target="_blank" rel="noopener noreferrer" class="shop-link">Online</a>',
+    zh: '★ Animate各店铺（委托销售）／<a href="https://www.animate-onlineshop.jp/products/list.php?mode=search&smt=%E3%81%82%E3%81%AB%E3%81%BE%E3%82%8B%E8%A3%BD%E8%8F%93" target="_blank" rel="noopener noreferrer" class="shop-link">线上</a><br>★ 同人商店Grep金沢店 / <a href="https://www.grep-tsuhan.net/?mode=grp&gid=2930825&sort=n" target="_blank" rel="noopener noreferrer" class="shop-link">线上</a><br>★ AKIBA-HOBBY / <a href="https://shop.akbh.jp/collections/vendors?q=%E3%81%82%E3%81%AB%E3%81%BE%E3%82%8B%E8%A3%BD%E8%8F%93&sort_by=manual" target="_blank" rel="noopener noreferrer" class="shop-link">线上</a>'
   },
 
   // SNSセクション
