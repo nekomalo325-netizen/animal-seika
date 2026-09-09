@@ -358,14 +358,6 @@ const I18N_DATA = {
     en: 'Visual director who brings worlds to life.<br>Specializes in elegant expression utilizing white space and atmosphere, and merchandise planning that maximizes the charm of illustrations.',
     zh: '将世界观化为现实的视觉总监。<br>擅长利用留白和氛围感的优雅表现，以及最大限度发挥插画魅力的周边企划与制作。'
   },
-  "about.member.fuka.role": {
-    ja: "副代表", en: "Vice Representative", zh: "副代表"
-  },
-  "about.member.fuka.desc": {
-    ja: '2Dイラストや3Dメタバースなど多彩な活動を展開するクリエイター。<br>SNS管理と制作面で強力にサポート',
-    en: 'A versatile creator active in 2D illustration and 3D metaverse.<br>Provides strong support in SNS management and production.',
-    zh: '在2D插画和3D元宇宙等多领域活跃的创作者。<br>在SNS管理和制作方面提供强力支持。'
-  },
   "about.member.nekomalo.role": {
     ja: "マネージャー", en: "Manager", zh: "经理"
   },
