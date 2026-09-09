@@ -48,24 +48,24 @@ const I18N_DATA = {
     zh: "Animate贩售・活动日程"
   },
   "home.topics.schedule.new1": {
-    ja: '<span style="font-weight: 600; color: #222;">7月上旬</span> シリアルカードVol.3',
-    en: '<span style="font-weight: 600; color: #222;">Early July</span> Serial Card Vol.3',
-    zh: '<span style="font-weight: 600; color: #222;">7月上旬</span> 限量编号卡片Vol.3'
-  },
-  "home.topics.schedule.new2": {
-    ja: '<span style="font-weight: 600; color: #222;">8月上旬</span> プライムキーチェーン新作5種',
-    en: '<span style="font-weight: 600; color: #222;">Early August</span> New Prime Keychain 5 types',
-    zh: '<span style="font-weight: 600; color: #222;">8月上旬</span> 新款精品钥匙扣5款'
-  },
-  "home.topics.schedule.new3": {
-    ja: '<span style="font-weight: 600; color: #222;">8月下旬</span> アートコレクションVol.4',
-    en: '<span style="font-weight: 600; color: #222;">Late August</span> Art Collection Vol.4',
-    zh: '<span style="font-weight: 600; color: #222;">8月下旬</span> 艺术收藏Vol.4'
+    ja: '<span style="font-weight: 600; color: #222;">9月中旬</span> パスケース新作10種',
+    en: '<span style="font-weight: 600; color: #222;">Mid September</span> 10 New Pass Cases',
+    zh: '<span style="font-weight: 600; color: #222;">9月中旬</span> 新款卡套10款'
   },
   "home.topics.schedule.event1": {
-    ja: '<span style="font-weight: 600; color: #222;">10月4日</span> 博麗神社秋季例大祭',
-    en: '<span style="font-weight: 600; color: #222;">October 4</span> Autumn Reitaisai',
-    zh: '<span style="font-weight: 600; color: #222;">10月4日</span> 博丽神社秋季例大祭'
+    ja: '<span style="font-weight: 600; color: #222;">10月4日</span> 博麗神社秋季例大祭＠ち20ab',
+    en: '<span style="font-weight: 600; color: #222;">October 4</span> Autumn Reitaisai @ Chi-20ab',
+    zh: '<span style="font-weight: 600; color: #222;">10月4日</span> 博丽神社秋季例大祭＠ち20ab'
+  },
+  "home.topics.schedule.event2": {
+    ja: '<span style="font-weight: 600; color: #222;">10月11日</span> 東方紅楼夢@6D（予定）',
+    en: '<span style="font-weight: 600; color: #222;">October 11</span> Touhou Kouroumu @ 6D (TBD)',
+    zh: '<span style="font-weight: 600; color: #222;">10月11日</span> 东方红楼梦@6D（预定）'
+  },
+  "home.topics.schedule.new2": {
+    ja: '<span style="font-weight: 600; color: #222;">11月頭</span> プライムキーチェーン新作5種',
+    en: '<span style="font-weight: 600; color: #222;">Early November</span> New Prime Keychain 5 types',
+    zh: '<span style="font-weight: 600; color: #222;">11月初</span> 新款精品钥匙扣5款'
   },
 
   // LINE UPセクション カテゴリカード
