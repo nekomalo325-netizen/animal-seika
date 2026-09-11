@@ -117,11 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // スライドトラックに画像要素を生成
             if (track) {
                 track.innerHTML = '';
-                // カレンダースライダーと同様にトラック幅を (スライド数 × 100)% に設定
+                // 横一列のトラック（幅100%、子要素が100%ずつ横並び）
                 track.style.display = 'flex';
                 track.style.flexDirection = 'row';
                 track.style.flexWrap = 'nowrap';
-                track.style.width = (totalSlides * 100) + '%';
+                track.style.width = '100%';
                 track.style.height = '100%';
                 track.style.transition = 'none';
                 track.style.transform = 'translateX(0%)';
@@ -129,15 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 images.forEach((src, idx) => {
                     const slide = document.createElement('div');
                     slide.className = 'image-modal__slide';
-                    // 1スライド分の幅を (100 / totalSlides)% に設定
-                    slide.style.width = (100 / totalSlides) + '%';
+                    // 1枚につき親枠全体の100%幅を確保
+                    slide.style.width = '100%';
+                    slide.style.minWidth = '100%';
+                    slide.style.maxWidth = '100%';
+                    slide.style.flex = '0 0 100%';
                     slide.style.height = '100%';
-                    slide.style.flexShrink = '0';
-                    slide.style.flexGrow = '0';
                     slide.style.display = 'flex';
                     slide.style.alignItems = 'center';
                     slide.style.justifyContent = 'center';
-                    slide.style.padding = '16px';
+                    slide.style.padding = '6px';
                     slide.style.boxSizing = 'border-box';
                     slide.style.overflow = 'hidden';
 
@@ -145,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.src = src;
                     img.alt = '商品画像 ' + (idx + 1);
                     img.className = 'image-modal__slide-img';
-                    // 画像全体が画面内に確実に収まり見切れないように設定
+                    // 少しアップで写真が美しく浮かび上がる設定
                     img.style.maxWidth = '100%';
                     img.style.maxHeight = '100%';
                     img.style.width = 'auto';
@@ -153,6 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.style.objectFit = 'contain';
                     img.style.display = 'block';
                     img.style.margin = 'auto';
+                    img.style.borderRadius = '12px';
+                    img.style.boxShadow = '0 12px 35px rgba(0, 0, 0, 0.6)';
                     img.style.pointerEvents = 'none';
 
                     slide.appendChild(img);
@@ -193,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 10);
         }
 
-        // 指定インデックスのスライドへ横移動（カレンダースライダーと同一仕様）
+        // 指定インデックスのスライドへ横移動（1枚ずつ確実にスライド）
         function goToSlide(index, animate = true) {
             const totalSlides = currentImages.length;
             if (totalSlides === 0) return;
@@ -201,8 +204,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (track) {
                 track.style.transition = animate ? 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
-                // カレンダーと同じ移動計算：インデックス × (100 / スライド総数)%
-                track.style.transform = 'translateX(-' + (currentIndex * (100 / totalSlides)) + '%)';
+                // 1スライド（100%幅）ごとに横移動
+                track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
             } else if (modalImg) {
                 modalImg.src = currentImages[currentIndex];
             }
@@ -311,10 +314,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // 閉じるボタンがクリックされた時の処理
         closeBtn.addEventListener('click', closeModal);
 
-        // 背景クリックで閉じる
+        // 背景クリックで閉じる（写真の外側をクリックした時）
         modal.addEventListener('click', (e) => {
-            // viewportやnavボタン、dots以外の背景をクリックした場合に閉じる
-            if (e.target === modal) {
+            if (e.target === modal || e.target.classList.contains('image-modal__wrapper')) {
                 closeModal();
             }
         });

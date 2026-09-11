@@ -16,7 +16,7 @@
     <title>Goods | あにまる製菓 - グッズ一覧</title>
     <meta name="description" content="あにまる製菓のグッズ一覧。プライムキーチェーン、アートコレクション、シリアルカード、アクリルジオラマなど、東方Project二次創作グッズをご覧いただけます。">
     <link rel="icon" href="rogo/アセット 4.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css?v=20260911_v3">
+    <link rel="stylesheet" href="css/style.css?v=20260911_v5">
 </head>
 
 <body>
@@ -652,24 +652,30 @@
 
     <button class="scroll-top" id="scroll-top" aria-label="ページトップに戻る">↑</button>
 
-    <!-- 画像スライダーモーダル（カレンダー仕様の1枚ずつ横スライド） -->
+    <!-- 画像拡大モーダル（少しアップで写真を表示＋くの字ボタンで横切り替え） -->
     <div id="image-modal" class="image-modal" role="dialog" aria-modal="true">
         <span class="image-modal__close" id="image-modal-close" aria-label="閉じる">&times;</span>
         <div class="image-modal__counter" id="image-modal-counter">1 / 5</div>
-        <div class="image-modal__slider" id="image-modal-slider">
-            <div class="image-modal__track" id="image-modal-track">
-                <img class="image-modal__content" id="image-modal-img" alt="">
+        <div class="image-modal__wrapper">
+            <!-- 前の写真へ（くの字ボタン） -->
+            <button class="image-modal__btn image-modal__btn--prev" id="image-modal-prev" aria-label="前の写真">❮</button>
+            
+            <!-- 写真表示スライダー（黒枠なし・写真そのものが少しアップで浮かぶ） -->
+            <div class="image-modal__slider" id="image-modal-slider">
+                <div class="image-modal__track" id="image-modal-track">
+                    <img class="image-modal__content" id="image-modal-img" alt="">
+                </div>
             </div>
-            <!-- カレンダー同様の「くの字」ボタン -->
-            <button class="image-modal__prev" id="image-modal-prev" aria-label="前の写真">❮</button>
-            <button class="image-modal__next" id="image-modal-next" aria-label="次の写真">❯</button>
-            <!-- インジケータードット -->
-            <div class="image-modal__dots" id="image-modal-dots"></div>
+            
+            <!-- 次の写真へ（くの字ボタン） -->
+            <button class="image-modal__btn image-modal__btn--next" id="image-modal-next" aria-label="次の写真">❯</button>
         </div>
+        <!-- インジケータードット -->
+        <div class="image-modal__dots" id="image-modal-dots"></div>
     </div>
 
     <script src="js/main.js"></script>
-    <script src="js/products.js?v=20260911_v3"></script>
+    <script src="js/products.js?v=20260911_v5"></script>
     <!-- 多言語対応 -->
     <script src="js/i18n.js"></script>
     <script src="js/lang-switcher.js"></script>
