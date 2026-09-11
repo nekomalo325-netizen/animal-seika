@@ -67,14 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── 商品カードの複数枚バッジ自動生成 ──
     initCardBadgeCount();
 
-    // ── 画像スライダーモーダルの処理（横スライド対応） ──
+    // ── 画像スライダーモーダルの処理（カレンダー仕様の1枚ずつ横スライド） ──
     const modal = document.getElementById('image-modal');
     const closeBtn = document.getElementById('image-modal-close');
     const prevBtn = document.getElementById('image-modal-prev');
     const nextBtn = document.getElementById('image-modal-next');
     const dotsContainer = document.getElementById('image-modal-dots');
     const counterEl = document.getElementById('image-modal-counter');
-    const viewport = document.getElementById('image-modal-viewport');
+    const sliderContainer = document.getElementById('image-modal-slider') || document.getElementById('image-modal-viewport');
     const track = document.getElementById('image-modal-track');
     const modalImg = document.getElementById('image-modal-img'); // 旧互換
 
@@ -109,20 +109,52 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // モーダルを開いてスライドを初期化
+        // モーダルを開いてスライドを初期化（カレンダースライダー仕様）
         function openModalWithImages(images) {
             currentIndex = 0;
+            const totalSlides = images.length;
 
             // スライドトラックに画像要素を生成
             if (track) {
                 track.innerHTML = '';
+                // カレンダースライダーと同様にトラック幅を (スライド数 × 100)% に設定
+                track.style.display = 'flex';
+                track.style.flexDirection = 'row';
+                track.style.flexWrap = 'nowrap';
+                track.style.width = (totalSlides * 100) + '%';
+                track.style.height = '100%';
+                track.style.transition = 'none';
+                track.style.transform = 'translateX(0%)';
+
                 images.forEach((src, idx) => {
                     const slide = document.createElement('div');
                     slide.className = 'image-modal__slide';
+                    // 1スライド分の幅を (100 / totalSlides)% に設定
+                    slide.style.width = (100 / totalSlides) + '%';
+                    slide.style.height = '100%';
+                    slide.style.flexShrink = '0';
+                    slide.style.flexGrow = '0';
+                    slide.style.display = 'flex';
+                    slide.style.alignItems = 'center';
+                    slide.style.justifyContent = 'center';
+                    slide.style.padding = '16px';
+                    slide.style.boxSizing = 'border-box';
+                    slide.style.overflow = 'hidden';
+
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = '商品画像 ' + (idx + 1);
                     img.className = 'image-modal__slide-img';
+                    // 画像全体が画面内に確実に収まり見切れないように設定
+                    img.style.maxWidth = '100%';
+                    img.style.maxHeight = '100%';
+                    img.style.width = 'auto';
+                    img.style.height = 'auto';
+                    img.style.objectFit = 'contain';
+                    img.style.display = 'block';
+                    img.style.margin = 'auto';
+                    img.style.pointerEvents = 'none';
+
                     slide.appendChild(img);
                     track.appendChild(slide);
                 });
@@ -133,12 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // ドットの生成
             if (dotsContainer) {
                 dotsContainer.innerHTML = '';
-                if (images.length > 1) {
+                if (totalSlides > 1) {
                     dotsContainer.style.display = 'flex';
                     images.forEach((_, idx) => {
                         const dot = document.createElement('span');
                         dot.className = 'image-modal__dot' + (idx === 0 ? ' image-modal__dot--active' : '');
-                        dot.setAttribute('aria-label', (idx + 1) + '枚目の画像へ');
+                        dot.setAttribute('aria-label', (idx + 1) + '枚目の写真へ');
                         dot.addEventListener('click', (e) => {
                             e.stopPropagation();
                             goToSlide(idx);
@@ -153,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 最初のスライドへ移動（アニメーションなし）
             goToSlide(0, false);
 
-            // モーダル表示＆スクロール無効化
+            // モーダル表示＆背面スクロール防止
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
             setTimeout(() => {
@@ -161,31 +193,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 10);
         }
 
-        // 指定インデックスのスライドへ横移動する関数
+        // 指定インデックスのスライドへ横移動（カレンダースライダーと同一仕様）
         function goToSlide(index, animate = true) {
-            if (currentImages.length === 0) return;
+            const totalSlides = currentImages.length;
+            if (totalSlides === 0) return;
             currentIndex = index;
 
             if (track) {
-                track.style.transition = animate ? 'transform 0.35s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
-                track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+                track.style.transition = animate ? 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)' : 'none';
+                // カレンダーと同じ移動計算：インデックス × (100 / スライド総数)%
+                track.style.transform = 'translateX(-' + (currentIndex * (100 / totalSlides)) + '%)';
             } else if (modalImg) {
                 modalImg.src = currentImages[currentIndex];
             }
 
             // カウンター表示の更新 (例: 1 / 5)
             if (counterEl) {
-                if (currentImages.length > 1) {
-                    counterEl.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+                if (totalSlides > 1) {
+                    counterEl.textContent = (currentIndex + 1) + ' / ' + totalSlides;
                     counterEl.style.display = 'block';
                 } else {
                     counterEl.style.display = 'none';
                 }
             }
 
-            // ナビゲーション矢印ボタンの表示切替
-            if (prevBtn) prevBtn.style.display = currentImages.length > 1 ? 'flex' : 'none';
-            if (nextBtn) nextBtn.style.display = currentImages.length > 1 ? 'flex' : 'none';
+            // カレンダー同様の「くの字」ボタン表示制御（複数枚ある場合のみ表示）
+            if (prevBtn) prevBtn.style.display = totalSlides > 1 ? 'flex' : 'none';
+            if (nextBtn) nextBtn.style.display = totalSlides > 1 ? 'flex' : 'none';
 
             // ドットのアクティブ状態更新
             if (dotsContainer) {
@@ -200,28 +234,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // 次の画像へ横スライド
+        // 次の写真へ横スライド（カレンダー同様のループ動作）
         function nextImage(e) {
             if (e) e.stopPropagation();
-            if (currentImages.length <= 1) return;
-            const nextIdx = (currentIndex + 1) % currentImages.length;
+            const totalSlides = currentImages.length;
+            if (totalSlides <= 1) return;
+            const nextIdx = (currentIndex >= totalSlides - 1) ? 0 : currentIndex + 1;
             goToSlide(nextIdx);
         }
 
-        // 前の画像へ横スライド
+        // 前の写真へ横スライド（カレンダー同様のループ動作）
         function prevImage(e) {
             if (e) e.stopPropagation();
-            if (currentImages.length <= 1) return;
-            const prevIdx = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            const totalSlides = currentImages.length;
+            if (totalSlides <= 1) return;
+            const prevIdx = (currentIndex <= 0) ? totalSlides - 1 : currentIndex - 1;
             goToSlide(prevIdx);
         }
 
         if (prevBtn) prevBtn.addEventListener('click', prevImage);
         if (nextBtn) nextBtn.addEventListener('click', nextImage);
 
-        // 画像エリアをクリックした時も次の画像へ進む（複数画像ある場合）
-        if (viewport) {
-            viewport.addEventListener('click', (e) => {
+        // スライダー枠をクリックした時も次の写真へ進む（複数枚ある場合）
+        if (sliderContainer) {
+            sliderContainer.addEventListener('click', (e) => {
+                // ボタンやドットをクリックした場合は重複実行しない
+                if (e.target === prevBtn || e.target === nextBtn || e.target.classList.contains('image-modal__dot')) {
+                    return;
+                }
                 if (currentImages.length > 1) {
                     nextImage(e);
                 }
@@ -233,12 +273,12 @@ document.addEventListener('DOMContentLoaded', () => {
             let touchEndX = 0;
             let touchEndY = 0;
 
-            viewport.addEventListener('touchstart', (e) => {
+            sliderContainer.addEventListener('touchstart', (e) => {
                 touchStartX = e.changedTouches[0].screenX;
                 touchStartY = e.changedTouches[0].screenY;
             }, { passive: true });
 
-            viewport.addEventListener('touchend', (e) => {
+            sliderContainer.addEventListener('touchend', (e) => {
                 touchEndX = e.changedTouches[0].screenX;
                 touchEndY = e.changedTouches[0].screenY;
                 const diffX = touchEndX - touchStartX;
@@ -247,9 +287,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 左右スワイプを検知（横の動きが縦の動きより大きい場合）
                 if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)) {
                     if (diffX < 0) {
-                        nextImage(e); // 左スワイプ -> 次の画像
+                        nextImage(e); // 左スワイプ -> 次の写真
                     } else {
-                        prevImage(e); // 右スワイプ -> 前の画像
+                        prevImage(e); // 右スワイプ -> 前の写真
                     }
                 }
             }, { passive: true });

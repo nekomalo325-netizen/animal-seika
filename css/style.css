@@ -1319,7 +1319,7 @@ p {
 }
 
 /* ============================================================
-   画像スライダーモーダル（横スライド対応）
+   画像スライダーモーダル（カレンダー仕様の1枚ずつ横スライド）
    ============================================================ */
 .image-modal {
   display: none;
@@ -1337,6 +1337,8 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .image-modal.show {
@@ -1359,13 +1361,13 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.15);
   transition: all 0.2s ease;
   line-height: 1;
 }
 
 .image-modal__close:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.3);
   transform: scale(1.08);
 }
 
@@ -1374,75 +1376,79 @@ p {
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   font-family: var(--font-heading);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.1em;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.6);
   padding: 5px 16px;
   border-radius: 20px;
   z-index: 10002;
   pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.image-modal__container {
+/* スライダー本体（カレンダー #topics-slider と同一のビューポート構造） */
+.image-modal__slider {
   position: relative;
-  width: 100%;
-  max-width: 900px;
+  width: min(88vw, 620px);
+  height: min(76vh, 620px);
+  max-width: 620px;
+  max-height: 620px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0d0d0d;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 70px;
+  user-select: none;
+  touch-action: pan-y;
   box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
-  .image-modal__container {
-    padding: 0 12px;
+  .image-modal__slider {
+    width: 94vw;
+    height: min(72vh, 94vw);
   }
 }
 
-.image-modal__viewport {
-  position: relative;
-  width: 100%;
-  max-width: 650px;
-  max-height: 75vh;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 8px;
-  background: #000;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  user-select: none;
-  touch-action: pan-y;
-}
-
+/* 横一列のトラック（カレンダー #topics-slider-track と同一） */
 .image-modal__track {
   display: flex;
-  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
   height: 100%;
-  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
 }
 
+/* 各スライド（1枚ごとの枠） */
 .image-modal__slide {
-  flex: 0 0 100%;
-  width: 100%;
   height: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
+/* スライド内の画像：画面内に確実に100%収まり見切れない */
 .image-modal__slide-img {
   max-width: 100%;
   max-height: 100%;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  display: block;
+  margin: auto;
   pointer-events: none;
+  user-select: none;
 }
 
 /* 旧バージョン互換用 */
@@ -1454,85 +1460,90 @@ p {
   object-fit: contain;
 }
 
+/* カレンダーと同一仕様の「くの字」ボタン */
 .image-modal__prev,
 .image-modal__next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 20px;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
   cursor: pointer;
-  z-index: 10002;
+  z-index: 30;
   display: none; /* 複数枚ある場合のみJSで表示 */
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   user-select: none;
+  line-height: 1;
 }
 
 .image-modal__prev:hover,
 .image-modal__next:hover {
-  background: rgba(255, 255, 255, 0.35);
-  transform: translateY(-50%) scale(1.08);
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
 .image-modal__prev {
-  left: 10px;
+  left: 12px;
 }
 
 .image-modal__next {
-  right: 10px;
+  right: 12px;
 }
 
 @media (max-width: 768px) {
   .image-modal__prev,
   .image-modal__next {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-    background: rgba(0, 0, 0, 0.6);
-    border-color: rgba(255, 255, 255, 0.3);
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
   }
   .image-modal__prev {
-    left: 4px;
+    left: 8px;
   }
   .image-modal__next {
-    right: 4px;
+    right: 8px;
   }
 }
 
+/* カレンダー同様のスライドインジケーター（ドット） */
 .image-modal__dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 10px;
-  margin-top: 18px;
-  z-index: 10002;
+  gap: 8px;
+  z-index: 30;
 }
 
 .image-modal__dot {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .image-modal__dot:hover {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   transform: scale(1.2);
 }
 
 .image-modal__dot--active {
-  background-color: #fff;
-  transform: scale(1.3);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  background-color: #ffffff;
+  transform: scale(1.35);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
 }
 
 /* カード上の複数画像バッジ */
