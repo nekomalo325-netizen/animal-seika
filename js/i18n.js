@@ -197,19 +197,24 @@ const I18N_DATA = {
 
   // 商品名
   "products.name.keychain.flan": {
-    ja: "プライムキーチェーン<br>フランドール・スカーレット",
-    en: "Prime Keychain<br>Flandre Scarlet",
-    zh: "精品钥匙扣<br>芙兰朵露・斯卡蕾特"
+    ja: "プライムキーチェーン<br>vol.1 フランドール・スカーレット",
+    en: "Prime Keychain<br>vol.1 Flandre Scarlet",
+    zh: "精品钥匙扣<br>vol.1 芙兰朵露・斯卡蕾特"
   },
   "products.name.keychain.remi": {
-    ja: "プライムキーチェーン<br>レミリア・スカーレット",
-    en: "Prime Keychain<br>Remilia Scarlet",
-    zh: "精品钥匙扣<br>蕾米莉亚・斯卡蕾特"
+    ja: "プライムキーチェーン<br>vol.2 レミリア・スカーレット",
+    en: "Prime Keychain<br>vol.2 Remilia Scarlet",
+    zh: "精品钥匙扣<br>vol.2 蕾米莉亚・斯卡蕾特"
   },
   "products.name.keychain.satokoi": {
-    ja: "プライムキーチェーン<br>古明地さとり/古明地こいし",
-    en: "Prime Keychain<br>Satori Komeiji / Koishi Komeiji",
-    zh: "精品钥匙扣<br>古明地觉/古明地恋"
+    ja: "プライムキーチェーン<br>vol.3 古明地さとり-古明地こいし",
+    en: "Prime Keychain<br>vol.3 Satori Komeiji - Koishi Komeiji",
+    zh: "精品钥匙扣<br>vol.3 古明地觉-古明地恋"
+  },
+  "products.artist.totenko": {
+    ja: "Illustrator: 東天紅",
+    en: "Illustrator: Totenko",
+    zh: "Illustrator: 东天红"
   },
   "products.name.keychain.marisa": {
     ja: "プライムキーチェーン<br>霧雨魔理沙",
