@@ -195,91 +195,108 @@ const I18N_DATA = {
     zh: '在桌面上展开的小小异世界。<br>多层叠加的亚克力部件营造出震撼的立体感和纵深感，<br>魅力十足地描绘出角色们编织的场景。'
   },
 
-  // 商品名
-  "products.name.keychain.flan": {
-    ja: "プライムキーチェーン<br>vol.1 フランドール・スカーレット",
-    en: "Prime Keychain<br>vol.1 Flandre Scarlet",
-    zh: "精品钥匙扣<br>vol.1 芙兰朵露・斯卡蕾特"
-  },
-  "products.name.keychain.remi": {
-    ja: "プライムキーチェーン<br>vol.2 レミリア・スカーレット",
-    en: "Prime Keychain<br>vol.2 Remilia Scarlet",
-    zh: "精品钥匙扣<br>vol.2 蕾米莉亚・斯卡蕾特"
-  },
-  "products.name.keychain.satokoi": {
-    ja: "プライムキーチェーン<br>vol.3 古明地さとり-古明地こいし",
-    en: "Prime Keychain<br>vol.3 Satori Komeiji - Koishi Komeiji",
-    zh: "精品钥匙扣<br>vol.3 古明地觉-古明地恋"
-  },
+  // イラストレーター表記
   "products.artist.totenko": {
     ja: "Illustrator: 東天紅",
     en: "Illustrator: Totenko",
     zh: "Illustrator: 东天红"
   },
+  "products.artist.here": {
+    ja: "Illustrator: ヘレ",
+    en: "Illustrator: HERE",
+    zh: "Illustrator: HERE"
+  },
+  "products.artist.lf": {
+    ja: "Illustrator: LF",
+    en: "Illustrator: LF",
+    zh: "Illustrator: LF"
+  },
+  "products.artist.miya": {
+    ja: "Illustrator: miy@",
+    en: "Illustrator: miy@",
+    zh: "Illustrator: miy@"
+  },
+
+  // 商品名 - プライムキーチェーン
+  "products.name.keychain.flan": {
+    ja: "プライムキーチェーン<br>Vol.1 フランドール・スカーレット",
+    en: "Prime Keychain<br>Vol.1 Flandre Scarlet",
+    zh: "精品钥匙扣<br>Vol.1 芙兰朵露・斯卡蕾特"
+  },
+  "products.name.keychain.remi": {
+    ja: "プライムキーチェーン<br>Vol.2 レミリア・スカーレット",
+    en: "Prime Keychain<br>Vol.2 Remilia Scarlet",
+    zh: "精品钥匙扣<br>Vol.2 蕾米莉亚・斯卡蕾特"
+  },
+  "products.name.keychain.satokoi": {
+    ja: "プライムキーチェーン<br>Vol.3 古明地さとり-古明地こいし",
+    en: "Prime Keychain<br>Vol.3 Satori Komeiji - Koishi Komeiji",
+    zh: "精品钥匙扣<br>Vol.3 古明地觉-古明地恋"
+  },
   "products.name.keychain.marisa": {
-    ja: "プライムキーチェーン<br>霧雨魔理沙",
-    en: "Prime Keychain<br>Marisa Kirisame",
-    zh: "精品钥匙扣<br>雾雨魔理沙"
+    ja: "プライムキーチェーン<br>Vol.4 霧雨魔理沙",
+    en: "Prime Keychain<br>Vol.4 Marisa Kirisame",
+    zh: "精品钥匙扣<br>Vol.4 雾雨魔理沙"
   },
   "products.name.keychain.reimu": {
-    ja: "プライムキーチェーン<br>博麗霊夢",
-    en: "Prime Keychain<br>Reimu Hakurei",
-    zh: "精品钥匙扣<br>博丽灵梦"
+    ja: "プライムキーチェーン<br>Vol.5 博麗霊夢",
+    en: "Prime Keychain<br>Vol.5 Reimu Hakurei",
+    zh: "精品钥匙扣<br>Vol.5 博丽灵梦"
   },
   "products.name.keychain.sakuya": {
-    ja: "プライムキーチェーン<br>十六夜咲夜",
-    en: "Prime Keychain<br>Sakuya Izayoi",
-    zh: "精品钥匙扣<br>十六夜咲夜"
+    ja: "プライムキーチェーン<br>Vol.6 十六夜咲夜",
+    en: "Prime Keychain<br>Vol.6 Sakuya Izayoi",
+    zh: "精品钥匙扣<br>Vol.6 十六夜咲夜"
   },
   "products.name.keychain.youmu": {
-    ja: "プライムキーチェーン<br>魂魄妖夢",
-    en: "Prime Keychain<br>Youmu Konpaku",
-    zh: "精品钥匙扣<br>魂魄妖梦"
+    ja: "プライムキーチェーン<br>Vol.7 魂魄妖夢",
+    en: "Prime Keychain<br>Vol.7 Youmu Konpaku",
+    zh: "精品钥匙扣<br>Vol.7 魂魄妖梦"
   },
   "products.name.keychain.mokou": {
-    ja: "プライムキーチェーン<br>藤原妹紅",
-    en: "Prime Keychain<br>Mokou Fujiwara",
-    zh: "精品钥匙扣<br>藤原妹红"
+    ja: "プライムキーチェーン<br>Vol.8 藤原妹紅",
+    en: "Prime Keychain<br>Vol.8 Mokou Fujiwara",
+    zh: "精品钥匙扣<br>Vol.8 藤原妹红"
   },
   "products.name.keychain.flanscarlet": {
-    ja: "プライムキーチェーン<br>フランドール・スカーレット",
-    en: "Prime Keychain<br>Flandre Scarlet",
-    zh: "精品钥匙扣<br>芙兰朵露・斯卡蕾特"
+    ja: "プライムキーチェーン<br>Vol.9 フランドール・スカーレット",
+    en: "Prime Keychain<br>Vol.9 Flandre Scarlet",
+    zh: "精品钥匙扣<br>Vol.9 芙兰朵露・斯卡蕾特"
   },
   "products.name.keychain.sakuyanew": {
-    ja: "プライムキーチェーン<br>十六夜咲夜",
-    en: "Prime Keychain<br>Sakuya Izayoi",
-    zh: "精品钥匙扣<br>十六夜咲夜"
+    ja: "プライムキーチェーン<br>Vol.10 十六夜咲夜",
+    en: "Prime Keychain<br>Vol.10 Sakuya Izayoi",
+    zh: "精品钥匙扣<br>Vol.10 十六夜咲夜"
   },
   "products.name.keychain.reimutotenko": {
-    ja: "プライムキーチェーン<br>博麗霊夢",
-    en: "Prime Keychain<br>Reimu Hakurei",
-    zh: "精品钥匙扣<br>博丽灵梦"
+    ja: "プライムキーチェーン<br>Vol.11 博麗霊夢",
+    en: "Prime Keychain<br>Vol.11 Reimu Hakurei",
+    zh: "精品钥匙扣<br>Vol.11 博丽灵梦"
   },
   "products.name.keychain.marisatotenko": {
-    ja: "プライムキーチェーン<br>霧雨魔理沙",
-    en: "Prime Keychain<br>Marisa Kirisame",
-    zh: "精品钥匙扣<br>雾雨魔理沙"
+    ja: "プライムキーチェーン<br>Vol.12 霧雨魔理沙",
+    en: "Prime Keychain<br>Vol.12 Marisa Kirisame",
+    zh: "精品钥匙扣<br>Vol.12 雾雨魔理沙"
   },
   "products.name.keychain.orinkuu": {
-    ja: "プライムキーチェーン<br>火焔猫燐＆霊烏路空",
-    en: "Prime Keychain<br>Rin Kaenbyou & Utsuho Reiuji",
-    zh: "精品钥匙扣<br>火焰猫燐＆灵乌路空"
+    ja: "プライムキーチェーン<br>Vol.13 火焔猫燐＆霊烏路空",
+    en: "Prime Keychain<br>Vol.13 Rin Kaenbyou & Utsuho Reiuji",
+    zh: "精品钥匙扣<br>Vol.13 火焰猫燐＆灵乌路空"
   },
   "products.name.keychain.flanrose": {
-    ja: "プライムキーチェーン<br>フランドール・スカーレット",
-    en: "Prime Keychain<br>Flandre Scarlet",
-    zh: "精品钥匙扣<br>芙兰朵露・斯卡蕾特"
+    ja: "プライムキーチェーン<br>Vol.14 フランドール・スカーレット",
+    en: "Prime Keychain<br>Vol.14 Flandre Scarlet",
+    zh: "精品钥匙扣<br>Vol.14 芙兰朵露・斯卡蕾特"
   },
   "products.name.keychain.remirose": {
-    ja: "プライムキーチェーン<br>レミリア・スカーレット",
-    en: "Prime Keychain<br>Remilia Scarlet",
-    zh: "精品钥匙扣<br>蕾米莉亚・斯卡蕾特"
+    ja: "プライムキーチェーン<br>Vol.15 レミリア・スカーレット",
+    en: "Prime Keychain<br>Vol.15 Remilia Scarlet",
+    zh: "精品钥匙扣<br>Vol.15 蕾米莉亚・斯卡蕾特"
   },
   "products.name.keychain.tenshi": {
-    ja: "プライムキーチェーン<br>比那名居天子",
-    en: "Prime Keychain<br>Tenshi Hinanawi",
-    zh: "精品钥匙扣<br>比那名居天子"
+    ja: "プライムキーチェーン<br>Vol.16 比那名居天子",
+    en: "Prime Keychain<br>Vol.16 Tenshi Hinanawi",
+    zh: "精品钥匙扣<br>Vol.16 比那名居天子"
   },
   "products.name.art.vol1": {
     ja: "アートコレクション 第1弾", en: "Art Collection Vol.1", zh: "艺术收藏 第1弹"
