@@ -652,19 +652,24 @@
 
     <button class="scroll-top" id="scroll-top" aria-label="ページトップに戻る">↑</button>
 
-    <!-- 画像拡大用モーダル -->
-    <div id="image-modal" class="image-modal">
-        <span class="image-modal__close" id="image-modal-close">&times;</span>
+    <!-- 画像スライダーモーダル（横スライド対応） -->
+    <div id="image-modal" class="image-modal" role="dialog" aria-modal="true">
+        <span class="image-modal__close" id="image-modal-close" aria-label="閉じる">&times;</span>
+        <div class="image-modal__counter" id="image-modal-counter">1 / 5</div>
         <div class="image-modal__container">
-            <button class="image-modal__prev" id="image-modal-prev" aria-label="前の画像">❮</button>
-            <img class="image-modal__content" id="image-modal-img">
-            <button class="image-modal__next" id="image-modal-next" aria-label="次の画像">❯</button>
+            <button class="image-modal__prev" id="image-modal-prev" aria-label="前の画像">&#10094;</button>
+            <div class="image-modal__viewport" id="image-modal-viewport">
+                <div class="image-modal__track" id="image-modal-track">
+                    <img class="image-modal__content" id="image-modal-img" alt="">
+                </div>
+            </div>
+            <button class="image-modal__next" id="image-modal-next" aria-label="次の画像">&#10095;</button>
         </div>
         <div class="image-modal__dots" id="image-modal-dots"></div>
     </div>
 
     <script src="js/main.js"></script>
-    <script src="js/products.js?v=20260302"></script>
+    <script src="js/products.js?v=20260911_v2"></script>
     <!-- 多言語対応 -->
     <script src="js/i18n.js"></script>
     <script src="js/lang-switcher.js"></script>
