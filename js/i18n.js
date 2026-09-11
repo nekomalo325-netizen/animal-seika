@@ -207,9 +207,9 @@ const I18N_DATA = {
     zh: "Illustrator: HERE"
   },
   "products.artist.lf": {
-    ja: "Illustrator: LF",
-    en: "Illustrator: LF",
-    zh: "Illustrator: LF"
+    ja: "Illustrator: L.F.",
+    en: "Illustrator: L.F.",
+    zh: "Illustrator: L.F."
   },
   "products.artist.miya": {
     ja: "Illustrator: miy@",
@@ -297,6 +297,31 @@ const I18N_DATA = {
     ja: "プライムキーチェーン<br>Vol.16 比那名居天子",
     en: "Prime Keychain<br>Vol.16 Tenshi Hinanawi",
     zh: "精品钥匙扣<br>Vol.16 比那名居天子"
+  },
+  "products.name.keychain.flanrappi": {
+    ja: "プライムキーチェーン<br>Vol.17 フランドール・スカーレット",
+    en: "Prime Keychain<br>Vol.17 Flandre Scarlet",
+    zh: "精品钥匙扣<br>Vol.17 芙兰朵露・斯卡蕾特"
+  },
+  "products.name.keychain.satorilf": {
+    ja: "プライムキーチェーン<br>Vol.18 古明地さとり",
+    en: "Prime Keychain<br>Vol.18 Satori Komeiji",
+    zh: "精品钥匙扣<br>Vol.18 古明地觉"
+  },
+  "products.name.keychain.marisareimuhere": {
+    ja: "プライムキーチェーン<br>Vol.19 霧雨魔理沙、博麗霊夢",
+    en: "Prime Keychain<br>Vol.19 Marisa Kirisame & Reimu Hakurei",
+    zh: "精品钥匙扣<br>Vol.19 雾雨魔理沙、博丽灵梦"
+  },
+  "products.name.keychain.youmukasane": {
+    ja: "プライムキーチェーン<br>Vol.20 魂魄妖夢",
+    en: "Prime Keychain<br>Vol.20 Youmu Konpaku",
+    zh: "精品钥匙扣<br>Vol.20 魂魄妖梦"
+  },
+  "products.name.keychain.marisayamanaka": {
+    ja: "プライムキーチェーン<br>Vol.21 霧雨魔理沙",
+    en: "Prime Keychain<br>Vol.21 Marisa Kirisame",
+    zh: "精品钥匙扣<br>Vol.21 雾雨魔理沙"
   },
   "products.name.art.vol1": {
     ja: "アートコレクション 第1弾", en: "Art Collection Vol.1", zh: "艺术收藏 第1弹"
