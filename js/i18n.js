@@ -37,11 +37,6 @@ const I18N_DATA = {
     en: "Animal Confectionery Goods Available",
     zh: "Animal Confectionery周边贩售中"
   },
-  "home.topics.sub_message": {
-    ja: "BOOTH限定シリアルカードプレゼントキャンペーン開催中",
-    en: "BOOTH Exclusive Serial Card Giveaway Campaign Now Active",
-    zh: "BOOTH限定限量编号卡片赠送活动进行中"
-  },
   "home.topics.schedule.title": {
     ja: "アニメイト頒布・イベントSchedule",
     en: "Animate Distribution & Event Schedule",
