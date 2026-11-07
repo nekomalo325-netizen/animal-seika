@@ -52,6 +52,11 @@ const I18N_DATA = {
     en: '<span style="font-weight: 600; color: #222;">Late December</span> Serial Card Vol.4',
     zh: '<span style="font-weight: 600; color: #222;">12月底</span> 限量编号卡片第4弹'
   },
+  "home.topics.schedule.event1": {
+    ja: '<span style="font-weight: 600; color: #222;">12/30（水）</span> コミケ2日目 東7ホール【Q-08a】',
+    en: '<span style="font-weight: 600; color: #222;">Dec 30 (Wed)</span> Comiket Day 2 East Hall 7 [Q-08a]',
+    zh: '<span style="font-weight: 600; color: #222;">12/30（周三）</span> Comiket第2天 东7厅【Q-08a】'
+  },
 
   // LINE UPセクション カテゴリカード
   "home.lineup.keychain": {
